@@ -1,0 +1,108 @@
+/* ----- Prodject Section ----- */
+.proj {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  margin: auto;
+  padding: 2.5em 0;
+  min-width: 600px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* ----- Photo Section ----- */
+.proj-photo {
+  position: relative;
+}
+
+.photo-container {
+  position: absolute;
+  left: -2.5em;
+  display: grid;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.3);
+}
+
+.photo-main {
+  height: 100%;
+}
+.photo-main img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.photo-album {
+  padding: 0.5rem 0.5rem;
+  border-radius: 0 0 6px 6px;
+  background-color: #fff;
+}
+.photo-album ul {
+  display: flex;
+  justify-content: space-around;
+}
+.photo-album li {
+  float: left;
+  width: 55px;
+  height: 55px;
+  border: 2px solid #a6a6a6;
+  border-radius: 5px;
+  list-style: none;
+}
+.photo-album .selected {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+/* ----- Informations Section ----- */
+.proj-info {
+  padding: 0.8em 0;
+}
+
+.title h1 {
+  margin-bottom: 0.1em;
+  color: #4c4c4c;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.title div {
+  font-size: 0.7em;
+  color: #a6a6a6;
+}
+
+.description {
+  clear: left;
+  margin: 2em 0;
+}
+.description h3 {
+  margin-bottom: 1em;
+}
+.description ul {
+  font-size: 0.8em;
+  list-style: disc;
+  margin-left: 1em;
+}
+.description li {
+  margin-bottom: 0.5em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8em;
+  color: red;
+  margin: 1rem;
+}
+.button-container div {
+  cursor: pointer;
+}
+
+.forward {
+  transform: translateX(0);
+}
+
+.backward {
+  transform: translateX(-100%);
+}/*# sourceMappingURL=proj_slide.css.map */

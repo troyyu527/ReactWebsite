@@ -1,0 +1,56 @@
+* {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.selected-main {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  background-image: url("./img/BIM/LGA/main.jpg");
+}
+
+.img-selected:hover {
+  transform: scale(1.2);
+}
+
+.p1 {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-image: url("./img/BIM/LGA/main.jpg");
+}
+
+.p2 {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-image: url("./img/BIM/LGA/const1.jpg");
+}
+
+.p3 {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-image: url("./img/BIM/LGA/const2.jpg");
+}
+
+.p4 {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-image: url("./img/BIM/LGA/CHRP.jpg");
+}
+
+.p5 {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-image: url("./img/BIM/LGA/CHRP2.jpg");
+}/*# sourceMappingURL=photo_style.css.map */
