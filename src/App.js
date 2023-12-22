@@ -6,7 +6,7 @@ import Projects from './components/Projects';
 //import BimTech from './components/BimTech';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import './App.css';
+import './css/App.css';
 import Aboutme from './components/Aboutme';
 function App() {
   //const navigate = useNavigate();

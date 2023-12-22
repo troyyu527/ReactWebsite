@@ -8,7 +8,7 @@
   width: 100%;
   height: 100%;
   border-radius: 10px 10px 0 0;
-  background-image: url("./img/BIM/LGA/main.jpg");
+  background-image: url("../img/BIM/LGA/main.jpg");
 }
 
 .img-selected:hover {
@@ -20,7 +20,7 @@
   width: 100%;
   height: 100%;
   border-radius: 2px;
-  background-image: url("./img/BIM/LGA/main.jpg");
+  background-image: url("../img/BIM/LGA/main.jpg");
 }
 
 .p2 {
@@ -28,7 +28,7 @@
   width: 100%;
   height: 100%;
   border-radius: 2px;
-  background-image: url("./img/BIM/LGA/const1.jpg");
+  background-image: url("../img/BIM/LGA/const1.jpg");
 }
 
 .p3 {
@@ -36,7 +36,7 @@
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  background-image: url("./img/BIM/LGA/const2.jpg");
+  background-image: url("../img/BIM/LGA/const2.jpg");
 }
 
 .p4 {
@@ -44,7 +44,7 @@
   width: 100%;
   height: 100%;
   border-radius: 2px;
-  background-image: url("./img/BIM/LGA/CHRP.jpg");
+  background-image: url("../img/BIM/LGA/CHRP.jpg");
 }
 
 .p5 {
@@ -52,5 +52,5 @@
   width: 100%;
   height: 100%;
   border-radius: 2px;
-  background-image: url("./img/BIM/LGA/CHRP2.jpg");
+  background-image: url("../img/BIM/LGA/CHRP2.jpg");
 }/*# sourceMappingURL=photo_style.css.map */

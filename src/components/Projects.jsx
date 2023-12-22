@@ -1,8 +1,8 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
 import {BIMslides} from './BIMslides';
 //import {BIMslides,CSslides} from '../projects/slides';
-import '../proj_slide.css'
-import '../photo_style.css'
+import '../css/proj_slide.css';
+import '../css/photo_style.css';
 function Projects(props) {
   //const {name,pos,currentPlayer} = props
   const [currentBIMSlide, setCurrentBIMSlide] = useState(0);
@@ -15,7 +15,7 @@ function Projects(props) {
     setSelectedImage(imageName);
     let main = document.querySelector(".selected-main");
     let selectImg = document.querySelector("."+selectedImage);
-    main.style.backgroundImage = selectImg.style.backgroundImage
+    main.style.backgroundImage = selectImg.style.backgroundImage;
   };
   const handleBIMSlide = (direction) => {
     if (direction === 'forward') {
@@ -50,7 +50,7 @@ function Projects(props) {
                   <div class="card-front">
                     <div class="proj-wrap">
                       <div>
-                        <BIMslides handleImageClick={handleImageClick} />
+                        {/* <BIMslides handleImageClick={handleImageClick} /> */}
                         {/* {slideBIMSet[currentBIMSlide]} */}
                       </div>
                       <div className="button-container">

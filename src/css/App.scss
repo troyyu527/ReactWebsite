@@ -99,11 +99,13 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: absolute;
   
   .page{
     display: flex;
     position: relative;
     width: 100vw;
+    height:90vh;
     padding-top:60px;
     flex-grow: 1;
     justify-content: center;
@@ -112,7 +114,8 @@ body {
     .aboutme{
       display: flex;
       justify-content: center;
-      width: 70%;
+      width: 90%;
+      height: 90%;
       border: 2px dashed red;
 
       .profile-card{

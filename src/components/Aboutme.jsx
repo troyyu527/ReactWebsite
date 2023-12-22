@@ -9,7 +9,7 @@ function Aboutme(props) {
       <div className="aboutme">
         <div className='profile-card'>
           <div className='first-con'>
-            <img className='photo'></img>
+            <img className='photo' alt='profile-pic'></img>
             <p>Troy</p>
             <p>Yu</p>
             <p>BIM Developer</p>
