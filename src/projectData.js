@@ -9,14 +9,14 @@ export const projectDataBIM = [
       "Conduct site planning and clash detection monitoring."
     ],
     img: [
-      "./ReactWebsite/img/BIM/LGA/main.jpg",
-      "./ReactWebsite/img/BIM/LGA/const1.jpg",
-      "./ReactWebsite/img/BIM/LGA/const2.jpg",
-      "./ReactWebsite/img/BIM/LGA/pick.png",
-      "./ReactWebsite/img/BIM/LGA/CHRP.jpg",
-      "./ReactWebsite/img/BIM/LGA/CHRP2.jpg",
-      "./ReactWebsite/img/BIM/LGA/CHRP3.png",
-      "./ReactWebsite/img/BIM/LGA/2020-02-07.png",
+      "${procces.env.PUBLIC_URL}/img/BIM/LGA/main.jpg",
+      "${procces.env.PUBLIC_URL}/BIM/LGA/const1.jpg",
+      "${procces.env.PUBLIC_URL}/img/BIM/LGA/const2.jpg",
+      "${procces.env.PUBLIC_URL}/img/BIM/LGA/pick.png",
+      "${procces.env.PUBLIC_URL}/img/BIM/LGA/CHRP.jpg",
+      "${procces.env.PUBLIC_URL}/img/BIM/LGA/CHRP2.jpg",
+      "${procces.env.PUBLIC_URL}/img/BIM/LGA/CHRP3.png",
+      "${procces.env.PUBLIC_URL}/img/BIM/LGA/2020-02-07.png",
     ],
     
   },
