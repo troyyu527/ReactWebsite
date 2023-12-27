@@ -17,15 +17,15 @@ function App() {
  
   return (
     <div className="App">
-      {currentPage !=="${procces.env.PUBLIC_URL}/" && <Menubar currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
+      {currentPage !=="/" && <Menubar currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
       <div className='wrapper'>
         <Routes>
-          <Route path="${procces.env.PUBLIC_URL}/" element={<Aboutme setCurrentPage={setCurrentPage}/>}/>
-          <Route path="${procces.env.PUBLIC_URL}/Resume" exact element={<Resume/>}/>
-          <Route path="${procces.env.PUBLIC_URL}/Projects" exact element={<Projects/>}/>
-          <Route path="${procces.env.PUBLIC_URL}/WebApps" exact element={<WebApps/>}/>
-          <Route path="${procces.env.PUBLIC_URL}/3Dsample" exact element={<SampleModel/>}/>
-          <Route path="${procces.env.PUBLIC_URL}/Contact" exact element={<Contact/>}/>
+          <Route path="/" element={<Aboutme setCurrentPage={setCurrentPage}/>}/>
+          <Route path="/Resume" exact element={<Resume/>}/>
+          <Route path="/Projects" exact element={<Projects/>}/>
+          <Route path="/WebApps" exact element={<WebApps/>}/>
+          <Route path="/3Dsample" exact element={<SampleModel/>}/>
+          <Route path="/Contact" exact element={<Contact/>}/>
         </Routes>
       </div>
     </div>
