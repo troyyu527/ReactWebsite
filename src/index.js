@@ -10,7 +10,7 @@ root.render(
     // <BrowserRouter>
     //   <App/>
     // </BrowserRouter>
-    <HashRouter>
+    <HashRouter basename="/ReactWebsite">
       <App />
     </HashRouter>
   

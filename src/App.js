@@ -22,11 +22,11 @@ function App() {
         
           <Routes>
             <Route path="/ReactWebsite" exact element={<Aboutme setCurrentPage={setCurrentPage}/>}/>
-            <Route path="/Resume" exact element={<Resume/>}/>
-            <Route path="/Projects" exact element={<Projects/>}/>
-            <Route path="/WebApps" exact element={<WebApps/>}/>
-            <Route path="/3Dsample" exact element={<SampleModel/>}/>
-            <Route path="/Contact" exact element={<Contact/>}/>
+            <Route path="/Resume"  element={<Resume/>}/>
+            <Route path="/Projects"  element={<Projects/>}/>
+            <Route path="/WebApps"  element={<WebApps/>}/>
+            <Route path="/3Dsample"  element={<SampleModel/>}/>
+            <Route path="/Contact"  element={<Contact/>}/>
           </Routes>
         
         
