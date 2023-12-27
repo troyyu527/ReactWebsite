@@ -3,7 +3,7 @@ import '../css/contactme.css';
 import media from '../profile/play-4-512.png';
 import linkedin from '../profile/linkedin_icon.png';
 import github from '../profile/github_icon.png';
-function Contact(props) {
+function Contact() {
   //const {name,pos,currentPlayer} = props
   const handleSend = ()=>{
     alert('Sorry! Sending message is still under construction. Please send to my email directly.');
@@ -17,7 +17,7 @@ function Contact(props) {
                 <span className="cs-topper">Contact Me</span>
                 <h4 className="cs-title">Share Your Thought</h4>
                 
-                <form className="cs-form" id="cs-form-1105" name="Contact Form" method="post" action="javascript:void(0);">
+                <form className="cs-form" id="cs-form-1105" name="Contact Form" method="post">
                     <label className="cs-label">
                         Name
                         <input className="cs-input" required type="text" id="name-1105" name="name" placeholder="Name"/>
