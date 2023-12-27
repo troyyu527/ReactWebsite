@@ -5,10 +5,12 @@ $color-highlight: #ff3f40;
 .proj {
 	display: grid;
 	grid-template-columns: 0.9fr 1fr;
-	margin: auto;
+	margin-top: 1rem;
+	margin-bottom: 5rem;
 	padding: 2.5em 0;
 	min-width: 600px;
 	background-color: white;
+	min-height: 600px;
 	border-radius: 5px;
 }
 
@@ -30,12 +32,14 @@ $color-highlight: #ff3f40;
 
 .photo-main {
   height:100%;
+	width: 100%;
 	//border-radius: 10px 10px 0 0;
 	//background-color: #9be010;
 	//background: radial-gradient(#e5f89e, #96e001);
 
 	img {
 		position: absolute;
+		
 		//left: -3.5em;
 		//top: 2em;
 		width: 100%;
@@ -44,6 +48,7 @@ $color-highlight: #ff3f40;
 }
 
 .photo-album {
+	background-size: contain;
 	padding: 0.5rem 0.5rem;
 	border-radius: 0 0 6px 6px;
 	background-color: #fff;
@@ -58,15 +63,12 @@ $color-highlight: #ff3f40;
 		width: 55px;
 		height: 55px;
 		//padding: 1px;
-		border: 2px solid $color-secondary;
+		//border: 2px solid $color-secondary;
 		border-radius: 5px;
 		list-style: none;
 		
 	}
-	.selected{
-		border: 2px solid black;
-		border-radius: 5px;
-	}
+	
 	
   
 }
@@ -75,7 +77,9 @@ $color-highlight: #ff3f40;
 .proj-info {
 	padding: 0.8em 0;
 }
-
+b{
+	text-decoration: underline;
+}
 .title {
 	h1 {
 		margin-bottom: 0.1em;
@@ -85,17 +89,21 @@ $color-highlight: #ff3f40;
 	}
 
 	div {
+		margin-top: 1rem;
 		font-size: 0.7em;
 		color: $color-secondary;
 	}
 }
 
 .description {
-	clear: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	margin: 2em 0;
 
 	h3 {
 		margin-bottom: 1em;
+		margin-left: 0;
 	}
 
 	ul {

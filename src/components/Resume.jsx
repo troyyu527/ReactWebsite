@@ -8,14 +8,15 @@ function Resume(props) {
     <div className='page'>
       <div className="resume">
         <h1>Resume</h1>
+        <div className='con'>
         <div className='line-con'>
           <h2>Experience</h2>
-          <a href={TroyBIMResume} download="TroyYu_RESUME"><span>DOWNLOAD RESUME</span></a>
+          <a href={TroyBIMResume} download="TroyYu_RESUME"><span className='download'>DOWNLOAD RESUME</span></a>
         </div>
         <div className='main-con'>
           <div className='first-con'>
-            <h3>2014-2021</h3>
-            <p>BIM Engineer / Manager</p>
+            <h3>2014-2022</h3>
+            <p>BIM Engineer / Developer / Manager</p>
             <p>Urbantech Counsulting Engineering PC</p>
             <p>New York, NY, USA</p>
           </div>
@@ -36,9 +37,52 @@ function Resume(props) {
                   <li>General job site inspection.</li>
                 </ul>
               </li>
+              <li>
+                BIM Extension & Application Developement, including:
+                <ul>
+                  <li>LiDAR Data/Point Cloud Analysis</li>
+                    <ul>
+                      <li>Conducting clash detection and deformation analysis by aligning reality capture data with proposed design models. Employing Python to enhance precision through noise reduction in point cloud data and determining optimal fit for planar regions. Refining post-processing techniques for normalizing point cloud distributions and generating detailed data reports.</li>
+                    </ul>
+                  <li>Revit Extensions</li>
+                  <ul>
+                    <li>Created custom Autodesk Revit extension using C#, leveraging the Revit API to automate complex workflows and streamline interactions with BIM designed objects.</li>
+                    <li>Utilized Python to design and implement Dynamo scripts and workflows, enabling the manipulation of BIM data and streamlining complex tasks.</li>
+                  </ul>
+                  <li>Autodesk Network License Seat Tracker</li>
+                  <ul>
+                    <li>Designed and implemented a software license manager using C# and WPF on the .NET platform. This application allocated and tracked software licenses status., leading to improvement in license utilization and mitigating issues related to license depletion.</li>
+                  </ul>
+                  <li>Reinforcing Steel Bar Bill of Materials Generator</li>
+                  <ul>
+                    <li>Automated the processing of reinforcing steel bar Bill of Materials by developing an internal user-facing application using Python. This application extracted data from CAD models and generated accurate reports.</li>
+                  </ul>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
+        </div>
+        <div className="con">
+        <div className='line-con'>
+          <h2>Other Experience</h2>
+        </div>
+        <div className='main-con'>
+          <div className='first-con'>
+            <h3>2009-2011</h3>
+            <p>Research Assistant - Computational Analysis & Modeling</p>
+            <p>MSV Lab, National Taiwan Ocean University</p>
+            <p>Keelung, Taiwan</p>
+          </div>
+          <div className='second-con'>
+            <ul>
+              <li>Developed engineering models using MATLAB for applied mathematics, with Finite Element Analysis and elements result computation in engineering mechanics problems.</li>
+              <li>Worked on practical problems by formulating numerical equations and studying mathematical models.</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <div className="con">
         <div className='line-con'>
           <h2>Education</h2>
         </div>
@@ -64,7 +108,9 @@ function Resume(props) {
             <p>Bachelor of Science</p>
           </div>
         </div>
-        <div className='line-con'>
+        </div>
+        <div className="con">
+        <div className='line-con'style={{marginTop:"2rem"}}>
           <h2>Misc.</h2>
         </div>
         <div className='misc-con'>
@@ -85,8 +131,8 @@ function Resume(props) {
         <div className='misc-con'>
           <h3>Language</h3>
           <div className='con'>
-            <div className='list'>English (proficient)</div>
-            <div className='list'>Chinese - Mandarin (native)</div>
+            <div className='list'>English (Proficient)</div>
+            <div className='list'>Chinese - Mandarin (Native)</div>
           </div>
         </div>
         <div className='misc-con'>
@@ -117,13 +163,17 @@ function Resume(props) {
             <div className='list'>CSS</div>
             <div className='list'>Node.js</div>
             <div className='list'>Express.js</div>
-            <div className='list'>React</div>
             <div className='list'>D3.js</div>
+            <div className='list'>Three.js</div>
+            <div className='list'>WebGL</div>
+            <div className='list'>React</div>
             <div className='list'>MongoDB</div>
             <div className='list'>AWS</div>
             <div className='list'>Git</div>
           </div>
         </div>
+        </div>
+        
       </div>
         
     </div>

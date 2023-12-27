@@ -6,8 +6,70 @@
     all:unset;
     cursor: pointer;
   }
-  
 }
+:root {
+  /* remove this whole :root and put in your global css file that's shared on all pages, then just remove this section from all other Stitches you add later, only need this once in your global stylesheet */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(1.5rem, 1.5vw, 3rem) 1rem;
+}
+
+body {
+  
+font-family: 'Roboto', 'Arial', sans-serif;
+          margin: 0;
+      padding: 0;
+      }
+
+*, *:before, *:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: .1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+} 
+
 $main-background: rgb(143, 198, 198);
 $linkLineColor:blue;
 $card-background-color:rgba(195, 121, 121, 0.604);
@@ -97,208 +159,114 @@ body {
 }
 .wrapper{
   min-height: 100vh;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  
+  position: relative;
+  padding-bottom: 5rem;
+  justify-content: center;
   .page{
     display: flex;
     position: relative;
-    width: 100vw;
-    height:90vh;
+    // width: 90vw;
+    // height:90vh;
     padding-top:60px;
     flex-grow: 1;
     justify-content: center;
     align-content: center;
     
-    .aboutme{
-      display: flex;
-      justify-content: center;
-      width: 90%;
-      height: 90%;
-      border: 2px dashed red;
-
-      .profile-card{
-        display: flex;
-        overflow: hidden;
-        position: relative;
-        animation-duration: 3s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-name: rotate;
-        background-color: $card-background-color;
-        background-image:
-          radial-gradient(circle at 100% 0%,hsla(0,0%,100%,0.08) 29.5%,hsla(0,0%,100%,0) 30%),
-          radial-gradient(circle at 100% 0%,hsla(0,0%,100%,0.08) 39.5%,hsla(0,0%,100%,0) 40%),
-          radial-gradient(circle at 100% 0%,hsla(0,0%,100%,0.08) 49.5%,hsla(0,0%,100%,0) 50%);
-        border-radius: 0.5em;
-        box-shadow:
-          0 0 0 hsl(0,0%,80%),
-          0 0 0 hsl(0,0%,100%),
-          -0.2rem 0 0.75rem 0 hsla(0,0%,0%,0.3);
-        color: hsl(0,0%,100%);
-        width: 30rem;
-        height: 15rem;
-        transform: translate3d(0,0,0);
-        .first-con{
-          width: 30%;
-        }
-        
-      }
-    }
     .resume{
       display: flex;
       flex-direction: column;
-      justify-content: center;
       width: 80%;
       h1{ 
         display: flex;
         justify-content: center;
       }
-      .line-con{
-        display: flex;
-        justify-content: space-between;
-      }
-      .main-con{
-        display: flex;
-        border: 1px solid;
-        .edu{
+      .con{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        .line-con{
           display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        .first-con{
-          width: 40%;
-        }
-        .second-con{
-          width: 60%;
-        }
-        .second-con ul {
-          margin-left: 1rem;
-        }
-        .second-con ul ul {
-          margin-left: 1rem;
-        }
-      }
-      .misc-con{
-        display: flex;
-        flex-direction: column;
-        border: 1px solid;
-        .con{
-          display: flex;
-          flex-wrap:wrap;
-          align-items: center;
-          //justify-content: center;
-          .list{
-            display: flex;
-            align-items: center;
-            margin: 0.5rem;
-            &::before{
-              content: "";
-              display: block;
-              width: 10px;
-              height:10px;
-              background-color: blue;
-              margin-right: 5px;
-              
-            }
+          justify-content: space-between;
+          .download{
+            position: absolute;
+            right: 3rem;
+            top: 4rem;
+            padding: 5px;
+            background-color: rgb(159, 226, 43);
+            border: 3px solid rgb(216, 31, 31);
+            border-radius: 0.25rem;
           }
         }
-      } 
+        .main-con{
+          display: flex;
+          //border: 1px solid;
+          .edu{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          .first-con{
+            width: 40%;
+          }
+          .second-con{
+            width: 60%;
+          }
+          .second-con ul {
+            margin: 1rem;
+            line-height: 1rem;
+            list-style-position: outside;
+            li{margin: 1rem;line-height: 1rem;}
+          }
+          .second-con ul ul {
+            margin-left: 1rem;
+          }
+        }
+        .misc-con{
+          display: flex;
+          flex-direction: column;
+          //border: 1px solid;
+          .con{
+            display: flex;
+            flex-wrap:wrap;
+            align-items: center;
+            list-style-position: inside;
+            //justify-content: center;
+            .list{
+              display: flex;
+              align-items: center;
+              margin: 0.5rem;
+              &::before{
+                content: "";
+                display: block;
+                width: 10px;
+                height:10px;
+                background-color: darkgoldenrod;
+                margin-right: 5px;
+                
+              }
+            }
+          }
+        } 
+      }
+      
     }
     .projects{
       width: 80%;
       
-      .slide-container{
-        
-        .container{
-          
-          h3 {
-            font-size: 0.7em;
-            letter-spacing: 1.2px;
-            color: $color-secondary;
-          }
-          
-          input.proj-toggle{
-            position: absolute;
-            top: -999px;
-          }
-          .proj-toggle:checked ~ .card-3d-wrap .card-3d-wrapper {
-            transform: rotateY(180deg);
-            transition: transform 700ms 400ms ease-out; 
-          }
-          
-          .card-3d-wrap {
-            position: relative;
-            
-            
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-            perspective: 1000px;
-            .card-3d-wrapper {
-              width: 100%;
-              
-              position:absolute;    
-              top: 0;
-              left: 0;  
-              -webkit-transform-style: preserve-3d;
-              transform-style: preserve-3d;
-              transition: transform 700ms 400ms ease-out; 
-              .card-front, .card-back {
-                width: 100%;
-                height: 100%;
-                
-                position: absolute;
-                border-radius: 6px;
-                left: 0;
-                top: 0;
-                -webkit-transform-style: preserve-3d;
-                transform-style: preserve-3d;
-                -webkit-backface-visibility: hidden;
-                -moz-backface-visibility: hidden;
-                -o-backface-visibility: hidden;
-                backface-visibility: hidden;
-                box-shadow: 0 12px 35px 0 rgba(16, 39, 112,.07);
-              }
-              .card-back {
-                transform: rotateY(180deg);
-              }
-            }
-          }
-          .proj-wrap{
-            position: relative;
-          
-            width: 100%;
-            
-            display: block;
-            z-index: 1;
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-            -webkit-backface-visibility: hidden;
-            -moz-backface-visibility: hidden;
-            -o-backface-visibility: hidden;
-            backface-visibility: hidden;
-          }
-        }
-      }
-      
-      
-      
-      
-      
-      
-      
-      
     }
   }
   .footer{
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     border: 3px solid black;
-    margin-top: 60px;
+    //margin-top: 60px;
     padding: 0.5rem;
     .copyright{
       display: flex;

@@ -1,35 +1,62 @@
 import React from 'react'
 import {useNavigate} from "react-router-dom"
+import '../css/aboutme.css';
+import profilePic from '../profile/profile_photo.PNG'
 function Aboutme(props) {
-  //const {name,pos,currentPlayer} = props
+  const {setCurrentPage} = props;
   const navigate = useNavigate()
-  
+  const handleClick = ()=> {
+    setCurrentPage("/Resume");
+    navigate("/Resume");
+  }
   return (
-    <div className='page'>
-      <div className="aboutme">
-        <div className='profile-card'>
-          <div className='first-con'>
-            <img className='photo' alt='profile-pic'></img>
-            <p>Troy</p>
-            <p>Yu</p>
-            <p>BIM Developer</p>
-            <div>Sites</div>
-          </div>
-          <div className='second-con'>
-            <h1>Hello</h1>
-            <h3>Here's who I am & what I do</h3>
-            <div className='button-con'>
-              <button onClick={()=>navigate("/Resume")}>RESUME</button>
-              <button onClick={()=>navigate("/Projects")}>PROJECTS</button>
+    <div id='AboutMe'>
+      <section id="sbsr-333">
+        <div className="cs-container">
+          {/* Left Image Section */}
+          <div className="cs-image-group">
+            <picture className="cs-picture">
+              <img
+                loading="lazy"
+                decoding="async"
+                src={profilePic}
+                alt="Troy Yu"
+                width="300"
+                height="300"
+                aria-hidden="true"
+              />
+            </picture>
+            <div className="cs-box">
+              <span className="cs-number">8</span>
+              <span className="cs-desc">Years<br /> Experience</span>
             </div>
-            <p>Welcome to my world of BIM innovation. I'm Troy Yu - a BIM Engineer and Developer.</p>
-            <p>With a passion for enhancing construction workflows, I've led teams, streamlined processes, and developed custom tools that drive efficiency. Explore my journey of transforming ideas into reality through cutting-edge technology and collaborative teamwork.</p>
+          </div>
+          {/* Right Content Section*/}
+          <div className="cs-content">
+            <span className="cs-topper">About Me</span>
+            <h2 className="cs-title">Troy Yu</h2>
+            <h4 style={{ marginBottom: ".5rem" }}>~ BIM Engineer / Developer ~</h4>
+            <p className="cs-text" style={{ marginBottom: ".5rem" }}>
+            A highly skilled and detail-oriented BIM Engineer/Developer, adept in civil engineering and project management. Demonstrates proficiency in structural design, analysis, drafting, and BIM engineering. Possesses a strong work ethic, analytical mindset, and effective communication skills. Committed to ensuring project success through innovation and adherence to standards.
+            </p>
+            <h4 style={{ marginBottom: ".5rem" }}>Area of Experties</h4>
+            <ul className="cs-ul">
+              <li className="cs-li">Project Planning & Implementation</li>
+              <li className="cs-li">Testing & Quality Assurance</li>
+              <li className="cs-li">Cloud-Based BIM Solutions</li>
+              <li className="cs-li">BIM Models Conversion & Integration</li>
+              <li className="cs-li">BIM APIs Development</li>
+            </ul>
+            <div className="cs-button-solid" style={{userSelect:"none",cursor:"pointer"}} onClick={handleClick}>
+              Learn More
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
     
-  )
+  );
+  
 }
 
 export default Aboutme

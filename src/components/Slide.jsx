@@ -1,45 +1,97 @@
-function Slide(props){
-  //const {name,pos,currentPlayer} = props
+import React,{useState,useEffect} from 'react';
+import videoImg from "../video.png";
+export const Slide = ({ project }) => {
+	const title = project.title;
+	const client = project.client;
+	const location = project.location;
+	const jobs = project.jobs;
+	const img = project.img;
+	const video = project.video? project.video:null;
+	const [selectedImage, setSelectedImage] = useState(img[0]);
+	const [selectedVideo, setSelectedVideo] = useState(null);
+	const [isVideoSelected, setIsVideoSelected] = useState(false);
+	useEffect(()=>{
 
+	},[selectedVideo])
+  const handleImageClick = (clickedPath) => {
+		if (video && video.length > 0) {
+			if (video.includes(clickedPath)) {
+				setIsVideoSelected(true);
+				setSelectedImage(""); // Reset selected image when clicking a video thumbnail
+				setSelectedVideo(clickedPath);
+			} else {
+				setIsVideoSelected(false);
+				setSelectedImage(clickedPath);
+				setSelectedVideo(""); // Reset selected video when clicking an image thumbnail
+			}
+		} else {
+			setIsVideoSelected(false);
+			setSelectedImage(clickedPath);
+		}
 
-
-  
+  };
   return (
-    <section class="proj">
-      <div class="proj-photo">
-        <div class="photo-container">
-          <div class="photo-main">
-            <div className="selected-pix1"></div>
+		<section className="proj">
+			<div className="proj-photo">
+				<div className="photo-container">
+					<div className="photo-main">
+					{isVideoSelected ? (
+              <video width="100%" height="100%" controls autoPlay style={{ objectFit: 'cover' }}>
+                <source src={selectedVideo} type="video/mp4" />
+              </video>
+            ) : (
+              <div
+                className="selected-main"
+                style={{ backgroundImage: `url('${selectedImage}')` }}
+              ></div>
+            )}
           </div>
-          <div class="photo-album">
+          <div className="photo-album">
             <ul>
-              <li><div className="p1" onClick={selectPhoto("p1")}></div></li>
-              <li><div className="p2" onClick={selectPhoto("p2")}></div></li>
-              <li><div className="p3"></div></li>
-              <li><div className="p4"></div></li>
-              <li><div className="p5"></div></li>
+              {img.map((path, index) => (
+                <li key={index}>
+                  <div
+                    className={`thumbnail ${
+                      path === selectedImage && !isVideoSelected ? 'img-selected' : ''
+                    }`}
+                    style={{ backgroundImage: `url('${path}')` }}
+                    onClick={() => handleImageClick(path)}
+                  ></div>
+                </li>
+              ))}
+              {video &&
+                video.map((path, index) => (
+                  <li key={index}>
+                    <div
+                      className={`thumbnail ${
+                        path === selectedVideo && isVideoSelected ? 'img-selected' : ''
+                      }`}
+                      style={{ backgroundImage: `url('${videoImg}')` }}
+                      onClick={() => handleImageClick(path)}
+                    ></div>
+                  </li>
+                ))}
             </ul>
-          </div>
-        </div>
-      </div>
-      <div class="proj-info">
-        <div class="title">
-          <h1>LaGuardia Airport Terminal Redevelopment</h1>
-          <div>Client: Skanska-Walsh</div>
-          <div>Location: Queens, NY, USA</div>
-        </div>
-        <div class="description">
-          <h3>Accomplishment</h3>
-          <ul>
-            <li>Design & deliver construction pick plan and rigging required for steel erection</li>
-            <li>Review minimum crane positions and flow as well as improve crane path which decreased time span in construction and saved extra cost through the use of 3D pick planning into Revit. </li>
-            <li>Conduct site planning and clash detection monitoring.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  )
-
-}
-
+					</div>
+				</div>
+			</div>
+			<div className="proj-info">
+				<div className="title">
+					<h1>{title}</h1>
+					<div>Client: {client}</div>
+					<div>Location: {location}</div>
+				</div>
+				<div className="description">
+					<h3>Accomplishment</h3>
+					<ul>
+						{jobs.map((item,index)=>(
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+				</div>
+			</div>
+	</section>
+  );
+};
 export default Slide
+

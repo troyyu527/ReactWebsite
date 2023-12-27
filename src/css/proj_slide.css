@@ -2,10 +2,12 @@
 .proj {
   display: grid;
   grid-template-columns: 0.9fr 1fr;
-  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
   padding: 2.5em 0;
   min-width: 600px;
   background-color: white;
+  min-height: 600px;
   border-radius: 5px;
 }
 
@@ -27,6 +29,7 @@
 
 .photo-main {
   height: 100%;
+  width: 100%;
 }
 .photo-main img {
   position: absolute;
@@ -35,6 +38,7 @@
 }
 
 .photo-album {
+  background-size: contain;
   padding: 0.5rem 0.5rem;
   border-radius: 0 0 6px 6px;
   background-color: #fff;
@@ -47,18 +51,17 @@
   float: left;
   width: 55px;
   height: 55px;
-  border: 2px solid #a6a6a6;
   border-radius: 5px;
   list-style: none;
-}
-.photo-album .selected {
-  border: 2px solid black;
-  border-radius: 5px;
 }
 
 /* ----- Informations Section ----- */
 .proj-info {
   padding: 0.8em 0;
+}
+
+b {
+  text-decoration: underline;
 }
 
 .title h1 {
@@ -68,16 +71,20 @@
   font-weight: 900;
 }
 .title div {
+  margin-top: 1rem;
   font-size: 0.7em;
   color: #a6a6a6;
 }
 
 .description {
-  clear: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   margin: 2em 0;
 }
 .description h3 {
   margin-bottom: 1em;
+  margin-left: 0;
 }
 .description ul {
   font-size: 0.8em;
