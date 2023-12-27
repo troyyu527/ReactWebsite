@@ -91,11 +91,11 @@ export const projectDataBIM = [
     img: [
       "./img/BIM/Kosciuszko-Bridge/main.jpg",
       "./img/BIM/Kosciuszko-Bridge/const.jpg",
-      "./img/BIM/Kosciuszko-Bridge/2.png",
-      "./img/BIM/Kosciuszko-Bridge/17.png",
-      "./img/BIM/Kosciuszko-Bridge/21.png",
-      "./img/BIM/Kosciuszko-Bridge/22.png",
-      "./img/BIM/Kosciuszko-Bridge/2021-08-13.png",
+      "./img/BIM/Kosciuszko-Bridge/const3.png",
+      "./img/BIM/Kosciuszko-Bridge/const4.png",
+      "./img/BIM/Kosciuszko-Bridge/const5.png",
+      "./img/BIM/Kosciuszko-Bridge/const6.png",
+      "./img/BIM/Kosciuszko-Bridge/const7.png",
       "./img/BIM/Kosciuszko-Bridge/const2.jpg",
 
     ],
