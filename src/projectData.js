@@ -9,7 +9,7 @@ export const projectDataBIM = [
       "Conduct site planning and clash detection monitoring."
     ],
     img: [
-      "./img/BIM/LGA/main.jpg",
+      "./img/BIM/LGA/main1.jpg",
       "./img/BIM/LGA/const1.jpg",
       "./img/BIM/LGA/const2.jpg",
       "./img/BIM/LGA/pick.png",
