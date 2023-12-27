@@ -1,4 +1,4 @@
-import {React,useState} from 'react';
+import {React,useState,useEffect} from 'react';
 import {Routes,Route, useLocation} from "react-router-dom";
 import Menubar from './components/Menubar';
 import Resume from './components/Resume';
@@ -12,7 +12,9 @@ function App() {
   //const navigate = useNavigate();
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState(location.pathname);
-  
+  useEffect(()=>{
+    setCurrentPage("/")
+  },[])
   
  
   return (

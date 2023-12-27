@@ -9,14 +9,14 @@ export const projectDataBIM = [
       "Conduct site planning and clash detection monitoring."
     ],
     img: [
-      "/img/BIM/LGA/main.jpg",
-      "/img/BIM/LGA/const1.jpg",
-      "/img/BIM/LGA/const2.jpg",
-      "/img/BIM/LGA/pick.png",
-      "/img/BIM/LGA/CHRP.jpg",
-      "/img/BIM/LGA/CHRP2.jpg",
-      "/img/BIM/LGA/CHRP3.png",
-      "/img/BIM/LGA/2020-02-07.png",
+      "./ReactWebsite/img/BIM/LGA/main.jpg",
+      "./ReactWebsite/img/BIM/LGA/const1.jpg",
+      "./ReactWebsite/img/BIM/LGA/const2.jpg",
+      "./ReactWebsite/img/BIM/LGA/pick.png",
+      "./ReactWebsite/img/BIM/LGA/CHRP.jpg",
+      "./ReactWebsite/img/BIM/LGA/CHRP2.jpg",
+      "./ReactWebsite/img/BIM/LGA/CHRP3.png",
+      "./ReactWebsite/img/BIM/LGA/2020-02-07.png",
     ],
     
   },
@@ -31,13 +31,13 @@ export const projectDataBIM = [
       "Offer provisional support structure scheme, as well as follow-up steel shop drawing."
     ],
     img: [
-      "./img/BIM/Unionport-Bridge/main.jpg",
-      "./img/BIM/Unionport-Bridge/L32 jump span.png",
-      "./img/BIM/Unionport-Bridge/unionport.png",
-      "./img/BIM/Unionport-Bridge/SW-bridge.png",
+      "./ReactWebsite/img/BIM/Unionport-Bridge/main.jpg",
+      "./ReactWebsite/img/BIM/Unionport-Bridge/L32 jump span.png",
+      "./ReactWebsite/img/BIM/Unionport-Bridge/unionport.png",
+      "./ReactWebsite/img/BIM/Unionport-Bridge/SW-bridge.png",
     ],
     video:[
-      "./video/unionport/pick order.mp4",
+      "./ReactWebsite/video/unionport/pick order.mp4",
     ]
   },
   {
@@ -50,12 +50,12 @@ export const projectDataBIM = [
       "Generate miscellaneous steel shop drawings, including stair, ladder, railing, and bollard."
     ],
     img: [
-      "./img/BIM/Myrtle-Avenue-Viaduct/main.jpg",
-      "./img/BIM/Myrtle-Avenue-Viaduct/steelshop_3d.png",
-      "./img/BIM/Myrtle-Avenue-Viaduct/elev.png",
-      "./img/BIM/Myrtle-Avenue-Viaduct/2019-09-20.png",
-      "./img/BIM/Myrtle-Avenue-Viaduct/2019-09-20(1).png",
-      "./img/BIM/Myrtle-Avenue-Viaduct/2019-09-20(7).png",
+      "./ReactWebsite/img/BIM/Myrtle-Avenue-Viaduct/main.jpg",
+      "./ReactWebsite/img/BIM/Myrtle-Avenue-Viaduct/steelshop_3d.png",
+      "./ReactWebsite/img/BIM/Myrtle-Avenue-Viaduct/elev.png",
+      "./ReactWebsite/img/BIM/Myrtle-Avenue-Viaduct/2019-09-20.png",
+      "./ReactWebsite/img/BIM/Myrtle-Avenue-Viaduct/2019-09-20(1).png",
+      "./ReactWebsite/img/BIM/Myrtle-Avenue-Viaduct/2019-09-20(7).png",
 
     ],
   },
@@ -69,12 +69,12 @@ export const projectDataBIM = [
       "Utilize BIM technology to create site planning with ideal engineering solution and successfully attain super weekend bridge erection"
     ],
     img: [
-      "./img/BIM/Goethals-Bridge/bridge.jpg",
-      "./img/BIM/Goethals-Bridge/construction.jpg",
-      "./img/BIM/Goethals-Bridge/spmt.jpg",
-      "./img/BIM/Goethals-Bridge/pick.png",
-      "./img/BIM/Goethals-Bridge/pick2.png",
-      "./img/BIM/Goethals-Bridge/spmt.png",
+      "./ReactWebsite/img/BIM/Goethals-Bridge/bridge.jpg",
+      "./ReactWebsite/img/BIM/Goethals-Bridge/construction.jpg",
+      "./ReactWebsite/img/BIM/Goethals-Bridge/spmt.jpg",
+      "./ReactWebsite/img/BIM/Goethals-Bridge/pick.png",
+      "./ReactWebsite/img/BIM/Goethals-Bridge/pick2.png",
+      "./ReactWebsite/img/BIM/Goethals-Bridge/spmt.png",
 
     ],
   },
@@ -89,19 +89,19 @@ export const projectDataBIM = [
       "Prepared real-time erection/demolition sequence simulation and animation using Navisworks, as well as CAD drawing for official review."
     ],
     img: [
-      "./img/BIM/Kosciuszko-Bridge/main.jpg",
-      "./img/BIM/Kosciuszko-Bridge/const.jpg",
-      "./img/BIM/Kosciuszko-Bridge/2.png",
-      "./img/BIM/Kosciuszko-Bridge/17.png",
-      "./img/BIM/Kosciuszko-Bridge/21.png",
-      "./img/BIM/Kosciuszko-Bridge/22.png",
-      "./img/BIM/Kosciuszko-Bridge/2021-08-13.png",
-      "./img/BIM/Kosciuszko-Bridge/const2.jpg",
+      "./ReactWebsite/img/BIM/Kosciuszko-Bridge/main.jpg",
+      "./ReactWebsite/img/BIM/Kosciuszko-Bridge/const.jpg",
+      "./ReactWebsite/img/BIM/Kosciuszko-Bridge/2.png",
+      "./ReactWebsite/img/BIM/Kosciuszko-Bridge/17.png",
+      "./ReactWebsite/img/BIM/Kosciuszko-Bridge/21.png",
+      "./ReactWebsite/img/BIM/Kosciuszko-Bridge/22.png",
+      "./ReactWebsite/img/BIM/Kosciuszko-Bridge/2021-08-13.png",
+      "./ReactWebsite/img/BIM/Kosciuszko-Bridge/const2.jpg",
 
     ],
     video:[
-      "./video/k/Kbridge main span demo.mp4",
-      "./video/k/TRUSS SPAN DEMO.mp4",
+      "./ReactWebsite/video/k/Kbridge main span demo.mp4",
+      "./ReactWebsite/video/k/TRUSS SPAN DEMO.mp4",
     ]
   },
   {
@@ -113,10 +113,10 @@ export const projectDataBIM = [
       "Took charge of creating engineering drawing, load take-off calculation, and rigging detail.",
     ],
     img: [
-      "./img/BIM/Metropolitan-Avenue-Bascule-Bridge/main.jpg",
-      "./img/BIM/Metropolitan-Avenue-Bascule-Bridge/plan.png",
-      "./img/BIM/Metropolitan-Avenue-Bascule-Bridge/open.png",
-      "./img/BIM/Metropolitan-Avenue-Bascule-Bridge/section.png",
+      "./ReactWebsite/img/BIM/Metropolitan-Avenue-Bascule-Bridge/main.jpg",
+      "./ReactWebsite/img/BIM/Metropolitan-Avenue-Bascule-Bridge/plan.png",
+      "./ReactWebsite/img/BIM/Metropolitan-Avenue-Bascule-Bridge/open.png",
+      "./ReactWebsite/img/BIM/Metropolitan-Avenue-Bascule-Bridge/section.png",
 
     ],
   },
@@ -135,12 +135,12 @@ export const projectDataCS = [
       "Ensured user game account management and security for real-time game saving/loading."
     ],
     img: [
-      "./img/CS/UNO/main.png",
-      "./img/CS/UNO/game-menu.png",
-      "./img/CS/UNO/game-turn.png",
-      "./img/CS/UNO/draw-4.png",
-      "./img/CS/UNO/draw-4-pen.png",
-      "./img/CS/UNO/game-pause.png",
+      "./ReactWebsite/img/CS/UNO/main.png",
+      "./ReactWebsite/img/CS/UNO/game-menu.png",
+      "./ReactWebsite/img/CS/UNO/game-turn.png",
+      "./ReactWebsite/img/CS/UNO/draw-4.png",
+      "./ReactWebsite/img/CS/UNO/draw-4-pen.png",
+      "./ReactWebsite/img/CS/UNO/game-pause.png",
     ],
   },
   {
@@ -153,10 +153,10 @@ export const projectDataCS = [
       "Created reusable modules for efficient and maintainable codebase."
     ],
     img: [
-      "./img/CS/Visual-Data/data-tree.png",
-      "./img/CS/Visual-Data/data-graph.png",
-      "./img/CS/Visual-Data/algo-heapsort.png",
-      "./img/CS/Visual-Data/algo-quicksort.png",
+      "./ReactWebsite/img/CS/Visual-Data/data-tree.png",
+      "./ReactWebsite/img/CS/Visual-Data/data-graph.png",
+      "./ReactWebsite/img/CS/Visual-Data/algo-heapsort.png",
+      "./ReactWebsite/img/CS/Visual-Data/algo-quicksort.png",
     ],
   },
   {
@@ -169,9 +169,9 @@ export const projectDataCS = [
       "Implemented user-friendly graphical web UI for maze creation and customization."
     ],
     img: [
-      "./img/CS/HideNSeek/main.png",
-      "./img/CS/HideNSeek/seek.png",
-      "./img/CS/HideNSeek/maze.png",
+      "./ReactWebsite/img/CS/HideNSeek/main.png",
+      "./ReactWebsite/img/CS/HideNSeek/seek.png",
+      "./ReactWebsite/img/CS/HideNSeek/maze.png",
     ],
   },
   

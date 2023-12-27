@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import '../css/model.css';
+import objPath from '../obj/FinalBaseMesh.obj';
 
 function SampleModel(props){
   const modelRef1 = useRef();
@@ -30,7 +31,7 @@ function SampleModel(props){
     
     
     const loader = new OBJLoader();
-    const objPath = "/obj/FinalBaseMesh.obj"
+   
     loader.load(objPath, (object) => {
       // Add the loaded object to the scene
       object.position.y -= 10
