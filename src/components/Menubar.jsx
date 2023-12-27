@@ -3,11 +3,7 @@ import {Link} from "react-router-dom"
 function Menubar(props) {
   const {currentPage,setCurrentPage} = props
   //const navigate = useNavigate()
-  
-
   const handleLinkClick = (link) => {
-    console.log("link:",link)
-    console.log("currentPage:",currentPage)
     setCurrentPage(link);
   };
   return (

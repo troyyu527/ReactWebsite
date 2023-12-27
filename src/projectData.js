@@ -32,9 +32,9 @@ export const projectDataBIM = [
     ],
     img: [
       "./img/BIM/Unionport-Bridge/main.jpg",
-      "./img/BIM/Unionport-Bridge/const1.png",
-      "./img/BIM/Unionport-Bridge/const2.png",
-      "./img/BIM/Unionport-Bridge/const3.png",
+      "./img/BIM/Unionport-Bridge/const1.jp",
+      "./img/BIM/Unionport-Bridge/const2.jpg",
+      "./img/BIM/Unionport-Bridge/const3.jpg",
     ],
     video:[
       "./video/unionport/pick order.mp4",
