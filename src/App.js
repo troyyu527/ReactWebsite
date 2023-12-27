@@ -1,5 +1,5 @@
 import {React,useState} from 'react';
-import {Routes,Route, useLocation} from "react-router-dom";
+import {Routes,Route, useLocation,BrowserRouter} from "react-router-dom";
 import Menubar from './components/Menubar';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
@@ -10,8 +10,8 @@ import SampleModel from './components/SampleModel';
 import './css/App.css';
 function App() {
   //const navigate = useNavigate();
-  const location = useLocation();
-  const [currentPage, setCurrentPage] = useState(location.pathname);
+  //const location = useLocation();
+  const [currentPage, setCurrentPage] = useState("/");
   
   
  
@@ -19,8 +19,10 @@ function App() {
     <div className="App">
       {currentPage !=="/" && <Menubar currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
       <div className='wrapper'>
+        <BrowserRouter basename='/ReactWebsite'>
+        </BrowserRouter>
         <Routes>
-          <Route path="/" element={<Aboutme setCurrentPage={setCurrentPage}/>}/>
+          <Route path="/ReactWebsite" exact element={<Aboutme setCurrentPage={setCurrentPage}/>}/>
           <Route path="/Resume" exact element={<Resume/>}/>
           <Route path="/Projects" exact element={<Projects/>}/>
           <Route path="/WebApps" exact element={<WebApps/>}/>

@@ -1,7 +1,8 @@
 {
-  "name": "profile-website",
+  "homepage": "http://troyyu527.github.io/ReactWebsite",
+  "name": "ReactWebsite",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -41,7 +42,7 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
-  },
-  "homepage": "https://troyyu527.github.io/ReactWebsite"
+  }
+  
   
 }

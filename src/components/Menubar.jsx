@@ -6,6 +6,8 @@ function Menubar(props) {
   
 
   const handleLinkClick = (link) => {
+    console.log("link:",link)
+    console.log("currentPage:",currentPage)
     setCurrentPage(link);
   };
   return (
@@ -18,32 +20,32 @@ function Menubar(props) {
         </div> */}
         <div className='main-con'>
           <div className='container' >
-            <Link className={`nav-link ${currentPage === '${procces.env.PUBLIC_URL}/' ? 'visited-link' : ''}`} to="/" onClick={()=>handleLinkClick("/")}>
+            <Link className={`nav-link ${currentPage === '/' ? 'visited-link' : ''}`} to="/" onClick={()=>handleLinkClick("/")}>
             <div className='link'>ABOUT ME</div>
             </Link>
           </div>
           <div className='container'>
-            <Link className={`nav-link ${currentPage === '${procces.env.PUBLIC_URL}/Resume' ? 'visited-link' : ''}`} to="/Resume" onClick={()=>handleLinkClick("/Resume")}>
+            <Link className={`nav-link ${currentPage === '/Resume' ? 'visited-link' : ''}`} to="/Resume" onClick={()=>handleLinkClick("/Resume")}>
             <div className='link'>RESUME</div>
             </Link>
           </div>
           <div className='container'>
-            <Link className={`nav-link ${currentPage === '${procces.env.PUBLIC_URL}/Projects' ? 'visited-link' : ''}`} to="/Projects" onClick={()=>handleLinkClick("/Projects")}>
+            <Link className={`nav-link ${currentPage === '/Projects' ? 'visited-link' : ''}`} to="/Projects" onClick={()=>handleLinkClick("/Projects")}>
             <div className='link'>PROJECTS</div>
             </Link>
           </div>
           <div className='container'>
-            <Link className={`nav-link ${currentPage === '${procces.env.PUBLIC_URL}/WebApps' ? 'visited-link' : ''}`} to="/WebApps" onClick={()=>handleLinkClick("/WebApps")}>
+            <Link className={`nav-link ${currentPage === '/WebApps' ? 'visited-link' : ''}`} to="/WebApps" onClick={()=>handleLinkClick("/WebApps")}>
             <div className='link'>WEB APP</div>
             </Link>
           </div>
           <div className='container'>
-            <Link className={`nav-link ${currentPage === '${procces.env.PUBLIC_URL}/3Dsample' ? 'visited-link' : ''}`} to="/3Dsample" onClick={()=>handleLinkClick("/3Dsample")}>
+            <Link className={`nav-link ${currentPage === '/3Dsample' ? 'visited-link' : ''}`} to="/3Dsample" onClick={()=>handleLinkClick("/3Dsample")}>
             <div className='link'>3D MODEL VIEWER</div>
             </Link>
           </div>
           <div className='container'>
-            <Link className={`nav-link ${currentPage === '${procces.env.PUBLIC_URL}/Contact' ? 'visited-link' : ''}`} to="/Contact" onClick={()=>handleLinkClick("/Contact")}>
+            <Link className={`nav-link ${currentPage === '/Contact' ? 'visited-link' : ''}`} to="/Contact" onClick={()=>handleLinkClick("/Contact")}>
             <div className='link visitedLink'>CONTACT</div>
             </Link>
           </div>
