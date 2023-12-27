@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ReactWebsite/static/css/main.3c4bbe6e.css",
+    "main.js": "/ReactWebsite/static/js/main.5185df5a.js",
+    "static/media/TroyYu_resume 2023.pdf": "/ReactWebsite/static/media/TroyYu_resume 2023.19310d72c4f1b74b8106.pdf",
+    "static/media/profile_photo.PNG": "/ReactWebsite/static/media/profile_photo.8922c7992404933002ad.PNG",
+    "static/media/linkedin_icon.png": "/ReactWebsite/static/media/linkedin_icon.9aba105bebf1bc8f6921.png",
+    "static/media/github_icon.png": "/ReactWebsite/static/media/github_icon.78530df35b5eb8508896.png",
+    "index.html": "/ReactWebsite/index.html",
+    "main.3c4bbe6e.css.map": "/ReactWebsite/static/css/main.3c4bbe6e.css.map",
+    "main.5185df5a.js.map": "/ReactWebsite/static/js/main.5185df5a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c4bbe6e.css",
+    "static/js/main.5185df5a.js"
+  ]
+}
