@@ -1,5 +1,5 @@
 import React from 'react'
-import TroyBIMResume from '../download/TroyYu_resume 2023.pdf'
+import TroyBIMResume from '../download/TroyYu_Resume.pdf'
 function Resume(props) {
   //const {name,pos,currentPlayer} = props
   
@@ -15,8 +15,31 @@ function Resume(props) {
         </div>
         <div className='main-con'>
           <div className='first-con'>
-            <h3>2014-2022</h3>
-            <p>BIM Engineer / Developer / Manager</p>
+            <h3>01/2024 - Present</h3>
+            <p>BIM Supervisor</p>
+            <p>AECOM</p>
+            <p>New York, NY, USA</p>
+          </div>
+          <div className='second-con'>
+            <ul>
+              <li>Spearhead the development and implementation of BIM standards, protocols, and workflows, collaborating with project teams and management to define strategies for cloud infrastructure adoption across projects.</li>
+              <li>Explore and integrate emerging BIM technologies, tools, and plugins to enhance efficiency and productivity, identifying opportunities to integrate BIM with other organizational software.</li>
+              <li>
+                Demonstrate versatility in executing multiple responsibilities:
+                <ul>
+                  <li>Created C# libraries to retrieve digital data from CAD and Revit via APIs.</li>
+                  <li>Deployed Revit models on ACC, streamlining data transfers and exchanges.</li>
+                  <li>Applied Dynamo to automate workflows between Revit and CAD, optimizing BIM processes and conducting digital data extraction using SQL and Excel.</li>
+                  <li>Conducted Quality Assurance/Control to ensure model accuracy and completeness.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className='main-con'>
+          <div className='first-con'>
+            <h3>10/2014 - 12/2022</h3>
+            <p>BIM Engineer / Software Developer</p>
             <p>Urbantech Counsulting Engineering PC</p>
             <p>New York, NY, USA</p>
           </div>

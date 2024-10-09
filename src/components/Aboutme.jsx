@@ -37,7 +37,9 @@ function Aboutme(props) {
             <h2 className="cs-title">Troy Yu</h2>
             <h4 style={{ marginBottom: ".5rem" }}>~ BIM Engineer / Developer ~</h4>
             <p className="cs-text" style={{ marginBottom: ".5rem" }}>
-            A highly skilled and detail-oriented BIM Engineer/Developer, adept in civil engineering and project management. Demonstrates proficiency in structural design, analysis, drafting, and BIM engineering. Possesses a strong work ethic, analytical mindset, and effective communication skills. Committed to ensuring project success through innovation and adherence to standards.
+            A highly skilled and detail-oriented BIM Engineer/ Software Developer, specializing in Civil Engineering and Web Application Development. 
+            Demonstrates proficiency in structural design, analysis, simulation, and BIM automation. Possesses a strong work ethic, analytical mindset, and effective communication skills. 
+            Committed to ensuring project success through innovation and adherence to standards.
             </p>
             <h4 style={{ marginBottom: ".5rem" }}>Area of Experties</h4>
             <ul className="cs-ul">
@@ -46,6 +48,7 @@ function Aboutme(props) {
               <li className="cs-li">Cloud-Based BIM Solutions</li>
               <li className="cs-li">BIM Models Conversion & Integration</li>
               <li className="cs-li">BIM APIs Development</li>
+              <li className="cs-li">Web Application Development</li>
             </ul>
             <div className="cs-button-solid" style={{userSelect:"none",cursor:"pointer"}} onClick={handleClick}>
               Learn More
