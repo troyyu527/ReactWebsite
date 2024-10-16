@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ReactWebsite/static/css/main.64cbb361.css",
+    "main.css": "/ReactWebsite/static/css/main.def93d6d.css",
     "main.js": "/ReactWebsite/static/js/main.90afac9d.js",
     "static/media/FinalBaseMesh.obj": "/ReactWebsite/static/media/FinalBaseMesh.b00b7ebebc535c2780f2.obj",
     "static/media/TroyYu_Resume.pdf": "/ReactWebsite/static/media/TroyYu_Resume.a481c918d6579bb263c5.pdf",
@@ -8,11 +8,11 @@
     "static/media/linkedin_icon.png": "/ReactWebsite/static/media/linkedin_icon.9aba105bebf1bc8f6921.png",
     "static/media/github_icon.png": "/ReactWebsite/static/media/github_icon.78530df35b5eb8508896.png",
     "index.html": "/ReactWebsite/index.html",
-    "main.64cbb361.css.map": "/ReactWebsite/static/css/main.64cbb361.css.map",
+    "main.def93d6d.css.map": "/ReactWebsite/static/css/main.def93d6d.css.map",
     "main.90afac9d.js.map": "/ReactWebsite/static/js/main.90afac9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.64cbb361.css",
+    "static/css/main.def93d6d.css",
     "static/js/main.90afac9d.js"
   ]
 }
