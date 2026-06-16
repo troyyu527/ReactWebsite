@@ -1,204 +1,245 @@
 import React from 'react'
-import TroyBIMResume from '../download/TroyYu_Resume.pdf'
-function Resume(props) {
-  //const {name,pos,currentPlayer} = props
-  
-  
+
+function Resume() {
   return (
     <div className='page'>
       <div className="resume">
         <h1>Resume</h1>
+
+        {/* ---------------- Experience ---------------- */}
         <div className='con'>
-        <div className='line-con'>
-          <h2>Experience</h2>
-          <a href={TroyBIMResume} download="TroyYu_RESUME"><span className='download'>DOWNLOAD RESUME</span></a>
-        </div>
-        <div className='main-con'>
-          <div className='first-con'>
-            <h3>01/2024 - Present</h3>
-            <p>BIM Supervisor</p>
-            <p>AECOM</p>
-            <p>New York, NY, USA</p>
+          <div className='line-con'>
+            <h2>Experience</h2>
+            <a href={`${process.env.PUBLIC_URL || ''}/download/TroyYu_Resume.pdf`}
+              download="TroyYu_Resume.pdf"
+            >
+              <span className='download'>DOWNLOAD RESUME</span></a>
           </div>
-          <div className='second-con'>
-            <ul>
-              <li>Spearhead the development and implementation of BIM standards, protocols, and workflows, collaborating with project teams and management to define strategies for cloud infrastructure adoption across projects.</li>
-              <li>Explore and integrate emerging BIM technologies, tools, and plugins to enhance efficiency and productivity, identifying opportunities to integrate BIM with other organizational software.</li>
-              <li>
-                Demonstrate versatility in executing multiple responsibilities:
-                <ul>
-                  <li>Created C# libraries to retrieve digital data from CAD and Revit via APIs.</li>
-                  <li>Deployed Revit models on ACC, streamlining data transfers and exchanges.</li>
-                  <li>Applied Dynamo to automate workflows between Revit and CAD, optimizing BIM processes and conducting digital data extraction using SQL and Excel.</li>
-                  <li>Conducted Quality Assurance/Control to ensure model accuracy and completeness.</li>
-                </ul>
-              </li>
-            </ul>
+
+          <div className='main-con'>
+            <div className='first-con'>
+              <h3>01/2026 - 06/2026</h3>
+              <p>Software Engineer</p>
+              <p>BlueScope Buildings North America</p>
+              <p>(Contract via Innova Solutions)</p>
+              <p>Kansas City, MO, USA</p>
+            </div>
+            <div className='second-con'>
+              <ul>
+                <li>Developed enterprise-grade engineering software applications and Tekla Structures plugins using C#, .NET Framework, WPF, MVVM, and the Tekla Open API.</li>
+                <li>Designed and implemented engineering automation features for steel-building workflows, reducing manual design and detailing effort through API-driven software solutions.</li>
+                <li>Built reusable ViewModels, UI components, and application frameworks following WPF MVVM architecture, leveraging AI-assisted development workflows to improve implementation efficiency and code quality.</li>
+                <li>Contributed to migrating legacy engineering applications into BlueScope's next-generation plugin platform, improving maintainability, scalability, and long-term product support.</li>
+                <li>Leveraged AI-assisted development tools and Large Language Models (LLMs) for code generation, code review, technical research, debugging, documentation, and software migration.</li>
+                <li>Participated in software architecture discussions, solution design reviews, sprint planning, and technical decision-making within an Agile Scrum environment.</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className='main-con'>
-          <div className='first-con'>
-            <h3>10/2014 - 12/2022</h3>
-            <p>BIM Engineer / Software Developer</p>
-            <p>Urbantech Counsulting Engineering PC</p>
-            <p>New York, NY, USA</p>
-          </div>
-          <div className='second-con'>
-            <ul>
-              <li>Earned selection to develop and execute BIM functions, including construction of applications, creation of entire BIM work system, and establishment of high performance team</li>
-              <li>Led a team of 5 engineers in the implementation of BIM strategies, overseeing the development of internal BIM extensions and plugins for efficient project integration</li>
-              <li>Managed the conversion of the company's design system from traditional CAD platform to BIM (Revit) platform which led to time and cost savings</li>
-              <li>
-                Demonstrate expertise in performing multiple responsibilities, including:
-                <ul>
-                  <li>Overseeing the implementation of BIM processes and technologies across projects, collaborating with project teams, and ensuring compliance with BIM standards and protocols.</li>
-                  <li>Coordinating and managing BIM workflows and project deliverables, including clash detection, model integration, and data management</li>
-                  <li>Conducting Quality Assurance/Control to ensure accuracy and completeness in project models.</li>
-                  <li>Contributing to the development of BIM strategies, exploring innovative BIM solutions, and identifying opportunities to improve efficiency and productivity.</li>
-                  <li>Evaluating and selecting appropriate BIM software tools, managing licenses, and contributed to BIM software development.</li>
-                  <li>Construction Procedure Animation & Presentation Preparation.</li>
-                  <li>General job site inspection.</li>
-                </ul>
-              </li>
-              <li>
-                BIM Extension & Application Developement, including:
-                <ul>
-                  <li>LiDAR Data/Point Cloud Analysis</li>
-                    <ul>
-                      <li>Conducting clash detection and deformation analysis by aligning reality capture data with proposed design models. Employing Python to enhance precision through noise reduction in point cloud data and determining optimal fit for planar regions. Refining post-processing techniques for normalizing point cloud distributions and generating detailed data reports.</li>
-                    </ul>
-                  <li>Revit Extensions</li>
+
+          <div className='main-con'>
+            <div className='first-con'>
+              <h3>01/2024 - 12/2025</h3>
+              <p>BIM Supervisor - Digital Solutions</p>
+              <p>AECOM</p>
+              <p>New York, NY, USA</p>
+            </div>
+            <div className='second-con'>
+              <ul>
+                <li>Spearheaded the development and implementation of BIM standards, digital delivery workflows, and cloud-based collaboration strategies across multidisciplinary project teams.</li>
+                <li>Evaluated and integrated emerging BIM technologies, automation tools, APIs, and digital solutions to improve engineering productivity and project delivery efficiency.</li>
+                <li>
+                  Key automation &amp; digital-solutions contributions:
                   <ul>
-                    <li>Created custom Autodesk Revit extension using C#, leveraging the Revit API to automate complex workflows and streamline interactions with BIM designed objects.</li>
-                    <li>Utilized Python to design and implement Dynamo scripts and workflows, enabling the manipulation of BIM data and streamlining complex tasks.</li>
+                    <li>Developed custom Revit API solutions and C# libraries to automate data extraction, model analysis, and integration between CAD, BIM, and external systems.</li>
+                    <li>Designed workflow automation using Dynamo, SQL, and Excel, reducing manual processing effort and improving consistency of engineering deliverables.</li>
+                    <li>Managed Autodesk Construction Cloud (ACC) deployments, streamlining model coordination, cloud collaboration, and data exchange.</li>
+                    <li>Researched and piloted emerging AEC technologies and automation initiatives to support digital transformation.</li>
+                    <li>Performed model validation, quality assurance, and BIM data management to ensure compliance with project standards and client requirements.</li>
                   </ul>
-                  <li>Autodesk Network License Seat Tracker</li>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className='main-con'>
+            <div className='first-con'>
+              <h3>10/2014 - 12/2022</h3>
+              <p>BIM Engineer</p>
+              <p>Urbantech Consulting Engineering PC</p>
+              <p>New York, NY, USA</p>
+            </div>
+            <div className='second-con'>
+              <ul>
+                <li>Led the company's transition from traditional CAD-based workflows to BIM-based project delivery , establishing BIM standards, modeling practices, coordination workflows, and digital information management across structural engineering projects.</li>
+                <li>Used Autodesk Revit, AutoCAD, Civil3D, and Navisworks for BIM coordination, multidisciplinary collaboration, engineering design, drafting, and project delivery.</li>
+                <li>
+                  Key automation &amp; software-development contributions:
                   <ul>
-                    <li>Designed and implemented a software license manager using C# and WPF on the .NET platform. This application allocated and tracked software licenses status., leading to improvement in license utilization and mitigating issues related to license depletion.</li>
+                    <li>Developed custom Revit, AutoCAD, and Civil3D API solutions in C#, using custom User Attributes and metadata structures to automate data extraction and CAD/BIM interoperability.</li>
+                    <li>Created reusable software libraries, plugins, and desktop applications that streamlined engineering workflows and reduced repetitive tasks.</li>
+                    <li>Designed automation tools for rebar quantity takeoff, bill-of-material generation, Autodesk license management, and project data management.</li>
+                    <li>Implemented BIM workflows using point cloud technologies and LiDAR scanning data for coordination, analysis, and digital delivery.</li>
+                    <li>Researched, evaluated, and piloted emerging AEC technologies and automation solutions to modernize engineering processes.</li>
                   </ul>
-                  <li>Reinforcing Steel Bar Bill of Materials Generator</li>
-                  <ul>
-                    <li>Automated the processing of reinforcing steel bar Bill of Materials by developing an internal user-facing application using Python. This application extracted data from CAD models and generated accurate reports.</li>
-                  </ul>
-                </ul>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        </div>
-        <div className="con">
-        <div className='line-con'>
-          <h2>Other Experience</h2>
-        </div>
-        <div className='main-con'>
-          <div className='first-con'>
-            <h3>2009-2011</h3>
-            <p>Research Assistant - Computational Analysis & Modeling</p>
-            <p>MSV Lab, National Taiwan Ocean University</p>
-            <p>Keelung, Taiwan</p>
+
+        {/* ---------------- Selected Technical Projects ---------------- */}
+        <div className='con'>
+          <div className='line-con'>
+            <h2>Selected Technical Projects</h2>
           </div>
-          <div className='second-con'>
-            <ul>
-              <li>Developed engineering models using MATLAB for applied mathematics, with Finite Element Analysis and elements result computation in engineering mechanics problems.</li>
-              <li>Worked on practical problems by formulating numerical equations and studying mathematical models.</li>
-            </ul>
+
+          <div className='main-con'>
+            <div className='first-con'>
+              <p>UNO Multiplayer Web Game</p>
+              <p>Next.js, Node.js, Express.js, MongoDB</p>
+            </div>
+            <div className='second-con'>
+              <ul>
+                <li>Developed a full-stack multiplayer web application featuring user authentication, persistent game states, and RESTful API services.</li>
+                <li>Implemented a heuristic-based AI player using weighted decision-making and priority-queue algorithms.</li>
+                <li>Built front-end and back-end architectures with Next.js, Express.js, MongoDB Atlas, JWT, Passport.js, and Bcrypt.</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        </div>
-        <div className="con">
-        <div className='line-con'>
-          <h2>Education</h2>
-        </div>
-        <div className='main-con'>
-          <div className='first-con'>
-            <h3>2013-2014</h3>
-            <p>Columbia University</p>
-            <p>New York, NY, USA</p>
+
+          <div className='main-con'>
+            <div className='first-con'>
+              <p>Visualization of Data Structures &amp; Algorithms</p>
+              <p>D3.js, JavaScript</p>
+            </div>
+            <div className='second-con'>
+              <ul>
+                <li>Developed interactive visualizations of trees, heaps, graphs, and sorting algorithms using D3.js and SVG rendering.</li>
+                <li>Created reusable visualization modules and asynchronous, event-driven interactions to improve engagement and maintainability.</li>
+              </ul>
+            </div>
           </div>
-          <div className='second-con edu'>
-            <p>Civil Engineering & Engineering Mechanics</p>
-            <p>Master of Science</p>
-          </div>
-        </div>
-        <div className='main-con'>
-          <div className='first-con'>
-            <h3>2007-2011</h3>
-            <p>National Taiwan Ocean University</p>
-            <p>Taiwan</p>
-          </div>
-          <div className='second-con edu'>
-            <p>Harbor & River Engineering</p>
-            <p>Bachelor of Science</p>
-          </div>
-        </div>
-        </div>
-        <div className="con">
-        <div className='line-con'style={{marginTop:"2rem"}}>
-          <h2>Misc.</h2>
-        </div>
-        <div className='misc-con'>
-          <h3>Professional Skillset</h3>
-          <div className='con'>
-            <div className='list'>Computer Graphics in Engineering</div>
-            <div className='list'>Structural Drawings</div>
-            <div className='list'>Data Analysis</div>
-            <div className='list'>Project Planning and Implementation</div>
-            <div className='list'>Time Management</div>
-            <div className='list'>Rapid Conflict Resolution</div>
-            <div className='list'>Site Planning and Logistics</div>
-            <div className='list'>Software Development</div>
-            <div className='list'>API Integrations & Development</div>
-            <div className='list'>Web Application Architecture</div>
+
+          <div className='main-con'>
+            <div className='first-con'>
+              <p>Hide &amp; Seek Pathfinding Visualizer</p>
+              <p>React, JavaScript</p>
+            </div>
+            <div className='second-con'>
+              <ul>
+                <li>Developed an interactive pathfinding platform demonstrating Dijkstra's shortest-path algorithm and procedural maze generation.</li>
+                <li>Designed reusable React component architecture and state-management patterns supporting dynamic route analysis and visualization.</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className='misc-con'>
-          <h3>Language</h3>
-          <div className='con'>
-            <div className='list'>English (Proficient)</div>
-            <div className='list'>Chinese - Mandarin (Native)</div>
+
+        {/* ---------------- Education ---------------- */}
+        <div className='con'>
+          <div className='line-con'>
+            <h2>Education</h2>
+          </div>
+          <div className='main-con'>
+            <div className='first-con'>
+              <h3>2014</h3>
+              <p>Columbia University</p>
+              <p>New York, NY, USA</p>
+            </div>
+            <div className='second-con edu'>
+              <p>Master of Science</p>
+              <p>Civil Engineering &amp; Engineering Mechanics</p>
+            </div>
           </div>
         </div>
-        <div className='misc-con'>
-          <h3>License</h3>
-          <div className='con'>
-            <div className='list'>OSHA 10-Hour</div>
-            <div className='list'>OSHA Construction Scaffolding</div>
+
+        {/* ---------------- Additional Research ---------------- */}
+        <div className='con'>
+          <div className='line-con'>
+            <h2>Additional Research Experience</h2>
+          </div>
+          <div className='main-con'>
+            <div className='first-con'>
+              <h3>2009 - 2010</h3>
+              <p>Research Assistant</p>
+              <p>National Taiwan Ocean University , MSV Lab</p>
+              <p>Keelung, Taiwan</p>
+            </div>
+            <div className='second-con'>
+              <ul>
+                <li>Developed MATLAB-based engineering models supporting finite element analysis and engineering mechanics research.</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className='misc-con'>
-          <h3>Technical Acumen</h3>
-          <div className='con'>
-            <div className='list'>AutoCAD</div>
-            <div className='list'>Revit</div>
-            <div className='list'>Navisworks</div>
-            <div className='list'>Advance Steel</div>
-            <div className='list'>Civil 3D</div>
-            <div className='list'>ReCap Pro</div>
-            <div className='list'>InfraWorks</div>
-            <div className='list'>BIM 360</div>
-            <div className='list'>Autodesk Cloud/Platform Services</div>
-            <div className='list'>C#</div>
-            <div className='list'>.Net</div>
-            <div className='list'>WPF</div>
-            <div className='list'>Python</div>
-            <div className='list'>Javascript</div>
-            <div className='list'>HTML</div>
-            <div className='list'>CSS</div>
-            <div className='list'>Node.js</div>
-            <div className='list'>Express.js</div>
-            <div className='list'>D3.js</div>
-            <div className='list'>Three.js</div>
-            <div className='list'>WebGL</div>
-            <div className='list'>React</div>
-            <div className='list'>MongoDB</div>
-            <div className='list'>AWS</div>
-            <div className='list'>Git</div>
+
+        {/* ---------------- Skills ---------------- */}
+        <div className='con'>
+          <div className='line-con'>
+            <h2>Skills</h2>
+          </div>
+          <div className='misc-con'>
+            <h3>Areas of Expertise</h3>
+            <div className='con'>
+              <div className='list'>Engineering Software Development</div>
+              <div className='list'>BIM &amp; CAD Automation &amp; Delivery</div>
+              <div className='list'>AEC API Development</div>
+              <div className='list'>Desktop / Web Application Development</div>
+              <div className='list'>AI-Assisted Engineering Workflows</div>
+              <div className='list'>Cloud &amp; Data Integration</div>
+            </div>
+          </div>
+          <div className='misc-con'>
+            <h3>Languages &amp; Frameworks</h3>
+            <div className='con'>
+              <div className='list'>C#</div>
+              <div className='list'>.NET</div>
+              <div className='list'>WPF</div>
+              <div className='list'>MVVM</div>
+              <div className='list'>Python</div>
+              <div className='list'>JavaScript</div>
+              <div className='list'>React</div>
+              <div className='list'>Node.js</div>
+              <div className='list'>D3.js</div>
+              <div className='list'>Three.js</div>
+            </div>
+          </div>
+          <div className='misc-con'>
+            <h3>AEC APIs</h3>
+            <div className='con'>
+              <div className='list'>Revit API</div>
+              <div className='list'>AutoCAD API</div>
+              <div className='list'>Civil3D API</div>
+              <div className='list'>Tekla Open API</div>
+            </div>
+          </div>
+          <div className='misc-con'>
+            <h3>Cloud, Data &amp; DevOps</h3>
+            <div className='con'>
+              <div className='list'>Azure DevOps</div>
+              <div className='list'>Git</div>
+              <div className='list'>SQL</div>
+              <div className='list'>MongoDB</div>
+              <div className='list'>MySQL</div>
+              <div className='list'>ACC</div>
+              <div className='list'>BIM 360</div>
+            </div>
+          </div>
+          <div className='misc-con'>
+            <h3>AI / LLM</h3>
+            <div className='con'>
+              <div className='list'>Prompt Engineering</div>
+              <div className='list'>AI-Assisted Development</div>
+              <div className='list'>LLMs</div>
+              <div className='list'>Agentic Workflows</div>
+              <div className='list'>RAG</div>
+              <div className='list'>Local AI Deployment</div>
+              <div className='list'>Ollama</div>
+              <div className='list'>MCP</div>
+            </div>
           </div>
         </div>
-        </div>
-        
+
       </div>
-        
     </div>
   )
 }
