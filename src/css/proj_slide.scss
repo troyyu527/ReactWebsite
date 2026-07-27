@@ -148,3 +148,40 @@ b{
 // 		transform: scale(0.97);
 // 	}
 // }
+/* ----- Web Apps gallery (CSlide): 16:9 image window ----- */
+// The shared layout sizes the image to fill the grid column, which lands near
+// 4:3 and crops screenshots. This gives the Web Apps gallery a 16:9 window and
+// fits each shot inside it whole. Scoped to .proj-cs so the BIM gallery, which
+// reuses these class names through Slide.jsx, keeps its original framing.
+//
+// `contain` rather than `cover` is deliberate: the screenshots are not one
+// ratio — most run about 2:1, a few are nearly square — so any fixed window
+// would still crop some of them under `cover`.
+$photo-letterbox: #eef0f3;
+
+.proj-cs {
+	.photo-container {
+		height: auto;
+		grid-template-rows: auto auto;
+	}
+
+	.photo-main {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16 / 9;
+	}
+
+	.selected-main {
+		height: 100%;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: $photo-letterbox;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.thumbnail {
+		background-size: contain;
+		background-color: $photo-letterbox;
+	}
+}

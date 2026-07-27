@@ -151,3 +151,42 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   Web Apps gallery (CSlide) — 16:9 image window
+   ------------------------------------------------------------
+   The shared layout sizes the image to fill the grid column, which lands
+   near 4:3 and crops screenshots. These rules give the Web Apps gallery a
+   16:9 window instead, and fit each shot inside it whole.
+
+   `contain` rather than `cover` is deliberate: the screenshots are not a
+   single ratio — most run about 2:1 and a few are nearly square — so any
+   fixed window would still crop some of them under `cover`. `contain`
+   guarantees nothing is ever cut off, at the cost of letterboxing, which
+   the muted backdrop below is there to make look intentional.
+   ============================================================ */
+.proj-cs .photo-container {
+  height: auto;
+  grid-template-rows: auto auto;
+}
+
+.proj-cs .photo-main {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.proj-cs .selected-main {
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #eef0f3;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Thumbnails follow the same rule so the strip previews match the window. */
+.proj-cs .thumbnail {
+  background-size: contain;
+  background-color: #eef0f3;
+}

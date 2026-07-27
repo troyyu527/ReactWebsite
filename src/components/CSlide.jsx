@@ -10,8 +10,11 @@ export const CSlide = ({ project }) => {
   const handleImageClick = (clickedImagePath) => {
     setSelectedImage(clickedImagePath);
   };
+  // `proj-cs` widens the image window to 16:9 and shows screenshots whole
+  // rather than cropped. It is scoped to this component so the BIM gallery,
+  // which reuses these class names through Slide.jsx, keeps its own framing.
   return (
-		<section className="proj">
+		<section className="proj proj-cs">
 			<div className="proj-photo">
 				<div className="photo-container">
 					<div className="photo-main">
