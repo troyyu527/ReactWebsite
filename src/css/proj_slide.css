@@ -153,40 +153,29 @@
 }
 
 /* ============================================================
-   Web Apps gallery (CSlide) — 16:9 image window
+   Web Apps gallery (CSlide) — image window matched to the screenshots
    ------------------------------------------------------------
-   The shared layout sizes the image to fill the grid column, which lands
-   near 4:3 and crops screenshots. These rules give the Web Apps gallery a
-   16:9 window instead, and fit each shot inside it whole.
+   The shared layout sized the image to fill its grid column, landing near
+   4:3, and used `cover` — so every screenshot was cropped to fit.
 
-   `contain` rather than `cover` is deliberate: the screenshots are not a
-   single ratio — most run about 2:1 and a few are nearly square — so any
-   fixed window would still crop some of them under `cover`. `contain`
-   guarantees nothing is ever cut off, at the cost of letterboxing, which
-   the muted backdrop below is there to make look intentional.
+   The window is 2:1 because that is what the screenshots actually measure:
+   the eleven full-window shots range 1.99–2.21 with a mean of 2.07, so a
+   2:1 frame holds them essentially edge to edge. (16:9 = 1.78 was still too
+   tall and left bars.)
+
+   `contain` guarantees nothing is ever cut off, whatever the ratio. Three
+   UNO images are close to square (1.0–1.3) and will sit centred with space
+   either side — unavoidable while they remain a different shape; recapture
+   them near 2:1 and they will fill the frame like the rest.
    ============================================================ */
-.proj-cs .photo-container {
-  height: auto;
-  grid-template-rows: auto auto;
-}
-
 .proj-cs .photo-main {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 2 / 1;
 }
 
+/* `contain` is the whole fix — `cover` is what was cropping the shots.
+   Position, repeat and the 12px rounded clip already come from the base
+   rules, so only the fit and the backdrop need overriding here. */
 .proj-cs .selected-main {
-  height: 100%;
   background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #eef0f3;
-  border-radius: 12px 12px 0 0;
-}
-
-/* Thumbnails follow the same rule so the strip previews match the window. */
-.proj-cs .thumbnail {
-  background-size: contain;
-  background-color: #eef0f3;
+  background-color: #f1f5fb;
 }
