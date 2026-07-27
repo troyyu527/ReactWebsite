@@ -55,26 +55,22 @@ function SampleModel(props){
 
   }, []);
   return (
-    <div className='page'>
-      
-      <div className='cs-content'>
-      <span className="cs-topper">3D model / Point Cloud Viewer</span>
-      <h3>For Presentation Use</h3>
-      <div className='list-container'>
-        <h4>Available Actions:</h4>
-        <ul>
-          <li>Left-Click and Drag to "Rotate"</li>
-          <li>Right-Click and Drag to "Pan"</li>
-          <li>Scroll Mouse Wheel to "Zoom"</li>
-        </ul>
-      </div>
-      
+    <div className='page' id='viewer-page'>
+      <div className='viewer-intro'>
+        <span className="cs-topper">3D Model / Point Cloud Viewer</span>
+        <h1 className="cs-title">Interactive Model Viewer</h1>
+        <p className="cs-text">A lightweight WebGL viewer for presentation models. Use the controls below to inspect the geometry.</p>
+        <div className='list-container'>
+          <h4>Available Actions</h4>
+          <ul>
+            <li><b>Left-Click + Drag</b> to rotate</li>
+            <li><b>Right-Click + Drag</b> to pan</li>
+            <li><b>Scroll Wheel</b> to zoom</li>
+          </ul>
+        </div>
       </div>
       <div className='model-container' ref={modelRef1}></div>
-      
-      {/* <div className='model-container' ref={modelRef2}></div> */}
     </div>
-    
   )
 
 }

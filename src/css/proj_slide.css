@@ -1,115 +1,153 @@
-/* ----- Prodject Section ----- */
-.proj {
-  display: grid;
-  grid-template-columns: 0.9fr 1fr;
-  margin-top: 1rem;
-  margin-bottom: 5rem;
-  padding: 2.5em 0;
-  min-width: 600px;
-  background-color: white;
-  min-height: 600px;
-  border-radius: 5px;
+/* ============================================================
+   Project / Web-App cards
+   ============================================================ */
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
-/* ----- Photo Section ----- */
+.proj {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.proj:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+/* ----- Photo ----- */
 .proj-photo {
   position: relative;
 }
-
 .photo-container {
-  position: absolute;
-  left: -2.5em;
-  display: grid;
-  grid-template-rows: 1fr;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
   width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.3);
 }
-
 .photo-main {
-  height: 100%;
   width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: #f1f5fb;
 }
-.photo-main img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.photo-album {
-  background-size: contain;
-  padding: 0.5rem 0.5rem;
-  border-radius: 0 0 6px 6px;
-  background-color: #fff;
+.photo-main video {
+  border-radius: 12px;
 }
 .photo-album ul {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
 }
 .photo-album li {
-  float: left;
-  width: 55px;
-  height: 55px;
-  border-radius: 5px;
+  width: 54px;
+  height: 54px;
   list-style: none;
 }
 
-/* ----- Informations Section ----- */
+/* ----- Info ----- */
 .proj-info {
-  padding: 0.8em 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 0;
 }
-
-b {
-  text-decoration: underline;
-}
-
 .title h1 {
-  margin-bottom: 0.1em;
-  color: #4c4c4c;
-  font-size: 1.5em;
-  font-weight: 900;
+  margin-bottom: 0.75rem;
+  color: var(--headerColor);
+  font-size: clamp(1.25rem, 2.4vw, 1.55rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
 }
-.title div {
-  margin-top: 1rem;
-  font-size: 0.7em;
-  color: #a6a6a6;
+.title > div {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+.title > div:first-of-type {
+  margin-top: 0;
+}
+
+/* CSlide "ENTER" link */
+.proj-info nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  margin-top: 1.25rem !important;
+  background: var(--navy-800);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.proj-info nav:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+.proj-info nav a,
+.proj-info nav b {
+  color: #fff;
+  text-decoration: none;
 }
 
 .description {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  margin: 2em 0;
+  margin-top: 1.4rem;
 }
 .description h3 {
-  margin-bottom: 1em;
-  margin-left: 0;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
 }
 .description ul {
-  font-size: 0.8em;
-  list-style: disc;
-  margin-left: 1em;
+  font-size: 0.9rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .description li {
-  margin-bottom: 0.5em;
+  position: relative;
+  margin-bottom: 0.7rem;
+  padding-left: 1.3rem;
+  line-height: 1.55;
+  color: var(--bodyTextColor);
+}
+.description li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.8em;
-  color: red;
-  margin: 1rem;
+@media only screen and (max-width: 52rem) {
+  .proj {
+    grid-template-columns: 1fr;
+  }
 }
-.button-container div {
-  cursor: pointer;
-}
-
-.forward {
-  transform: translateX(0);
-}
-
-.backward {
-  transform: translateX(-100%);
-}/*# sourceMappingURL=proj_slide.css.map */

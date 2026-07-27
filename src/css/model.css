@@ -1,42 +1,80 @@
-.cs-content{
-  width: 500px;
-  height: 100%;
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-}
-h3{
-  margin: 2rem;
-  margin-left: 0;
-}
-h4{
-  margin: 3px;
-}
-.list-container{
+/* ============================================================
+   3D Model / Point Cloud Viewer
+   ============================================================ */
+#viewer-page {
   display: flex;
   flex-direction: column;
-  justify-content: left;
-}
-ul{
-  list-style-position: inside;
-}
-.list-container li{
-  margin: 5px;
+  align-items: center;
+  gap: 2rem;
 }
 
-.model-container {
-  width: 800px;
-  height: 800px;
-  margin: 0 auto; /* Center the viewer horizontally */
-  position: relative;
-  border: 10px solid darkolivegreen; /* Nice border style */
-  border-radius: 10px;
-  overflow: hidden; /* Ensure the border doesn't affect the size of the viewer */
-}
-
-.model-container canvas {
+#viewer-page .viewer-intro {
   width: 100%;
-  height: 100%;
+  max-width: 50rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#viewer-page .viewer-intro .cs-title {
+  margin-bottom: 0.85rem;
+}
+#viewer-page .viewer-intro .cs-text {
+  margin-bottom: 1.75rem;
+}
+
+#viewer-page .list-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1.1rem 1.5rem;
+}
+#viewer-page .list-container h4 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+#viewer-page .list-container ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+#viewer-page .list-container li {
+  font-size: 0.9rem;
+  color: var(--bodyTextColor);
+}
+#viewer-page .list-container li b {
+  color: var(--headerColor);
+  font-weight: 700;
+}
+
+#viewer-page .model-container {
+  width: 100%;
+  max-width: 50rem;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+#viewer-page .model-container canvas {
+  width: 100% !important;
+  height: 100% !important;
   display: block;
   cursor: grab;
+}
+#viewer-page .model-container canvas:active {
+  cursor: grabbing;
 }

@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Troy Yu — Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The personal portfolio and résumé site for **Hao "Troy" Yu**, Software Engineer /
+BIM & CAD Automation Developer. It presents professional experience, engineering
+(BIM) project work, self-built web applications, and a contact route, as a
+single-page React app.
 
-## Available Scripts
+**Live:** <http://troyyu527.github.io/ReactWebsite>
 
-In the project directory, you can run:
+## Pages
 
-### `npm start`
+| Route | Page | What it shows |
+|---|---|---|
+| `/` | About Me | Intro, profile, social links |
+| `/Resume` | Résumé | Experience, selected technical projects, education, skills — plus a PDF download |
+| `/Projects` | BIM Projects | AEC/construction work: LaGuardia, Kosciuszko Bridge, Goethals Bridge, and others, with photo and video galleries |
+| `/WebApps` | Web Apps | Self-built software: UNO Multiplayer, VisualAlgo, Hide & Seek |
+| `/3Dsample` | 3D Sample | A Three.js viewer loading an `.obj` mesh, with orbit controls |
+| `/Contact` | Contact | Form that composes a pre-filled email via `mailto:` |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Project content is data-driven: both galleries render from
+[`src/projectData.js`](src/projectData.js), so adding a project means adding an
+object, not writing a component.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tools & technologies
 
-### `npm test`
+| Area | Used |
+|---|---|
+| Framework | **React 18** |
+| Build tool | **Create React App** (`react-scripts` 5) |
+| Routing | **React Router 6** (`BrowserRouter`, `basename` from `PUBLIC_URL`) |
+| 3D | **Three.js** — `OBJLoader`, `OrbitControls` |
+| Styling | SCSS → CSS |
+| Deploy | GitHub Pages via `gh-pages` |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting started
 
-### `npm run build`
+```bash
+npm install
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Then open **<http://localhost:8080>**.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> The port is pinned to `8080` by the `start` script (`set PORT=8080 && ...`).
+> That syntax is Windows-specific — on macOS or Linux use `PORT=8080
+> react-scripts start`, or install `cross-env`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Build & deploy
 
-### `npm run eject`
+```bash
+npm run build        # production build → build/
+npm run deploy       # runs predeploy (build) then publishes build/ to gh-pages
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`homepage` in `package.json` is set to the GitHub Pages URL, which is what makes
+asset paths and the router `basename` resolve correctly under `/ReactWebsite/`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> **Routing note:** this uses `BrowserRouter`, not `HashRouter`. GitHub Pages has
+> no server-side rewrites, so loading a deep link such as `/ReactWebsite/Resume`
+> directly can 404 — navigating from within the app always works. If direct deep
+> links matter, either switch to `HashRouter` or add a `404.html` redirect shim.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project layout
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+public/
+  download/TroyYu_Resume.pdf   downloadable résumé (linked from /Resume)
+  img/ , video/                project media for the galleries
+src/
+  App.js                       routes and layout
+  projectData.js               ALL project content (BIM + web apps)
+  components/
+    Aboutme.jsx                landing page
+    Resume.jsx                 résumé content
+    Projects.jsx               BIM gallery      (reads projectDataBIM)
+    WebApps.jsx                web app gallery  (reads projectDataCS)
+    SampleModel.jsx            Three.js viewer
+    Contact.jsx                contact form (mailto)
+    Menubar.jsx                navigation
+    Slide.jsx / CSlide.jsx     image & content carousels
+  css/                         SCSS sources and compiled CSS
+  obj/                         3D model asset
+  profile/                     photos and icons
+TroyYu_Resume_2026.txt         résumé source text (not published — outside public/)
+```
 
-## Learn More
+## Updating content
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Projects** — edit [`src/projectData.js`](src/projectData.js).
+  `projectDataBIM` feeds `/Projects`, `projectDataCS` feeds `/WebApps`. Image
+  paths are relative to `public/`.
+- **Résumé (page)** — edit [`src/components/Resume.jsx`](src/components/Resume.jsx).
+- **Résumé (PDF)** — regenerate from `TroyYu_Resume_2026.txt` and replace
+  `public/download/TroyYu_Resume.pdf`. Keep the two in step; the page and the
+  download are separate sources.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Housekeeping notes
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `@emailjs/browser` is listed as a dependency but isn't used — the contact form
+  builds a `mailto:` link instead. Safe to remove.
+- `npm run build` with `CI=true` treats warnings as errors, so a stray lint
+  warning will fail a CI deploy even though a local build passes.

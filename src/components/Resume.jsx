@@ -96,13 +96,14 @@ function Resume() {
           <div className='main-con'>
             <div className='first-con'>
               <p>UNO Multiplayer Web Game</p>
-              <p>Next.js, Node.js, Express.js, MongoDB</p>
+              <p>React, TypeScript, Vite, Zustand, Supabase (PostgreSQL/Realtime), Tailwind, Vitest</p>
             </div>
             <div className='second-con'>
               <ul>
-                <li>Developed a full-stack multiplayer web application featuring user authentication, persistent game states, and RESTful API services.</li>
-                <li>Implemented a heuristic-based AI player using weighted decision-making and priority-queue algorithms.</li>
-                <li>Built front-end and back-end architectures with Next.js, Express.js, MongoDB Atlas, JWT, Passport.js, and Bcrypt.</li>
+                <li>Architected real-time online multiplayer on Supabase Realtime using a single-writer authority model — the acting seat owns its move and the host owns unattended seats — keeping four clients consistent with no dedicated game server.</li>
+                <li>Engineered resilience into live sessions: presence tracking hands an abandoned seat to the AI, players reconnect into their seat after a refresh, and newcomers can claim an AI seat mid-game via an atomic conditional update.</li>
+                <li>Implemented the rules as a pure, immutable TypeScript engine independent of React, driving a heuristic weighted-decision AI, and covered it with 66 unit tests including fully simulated games and card-conservation invariants.</li>
+                <li>Migrated the application from Next.js to Vite + React 18 + TypeScript with Zustand state management, behind a backend-agnostic auth and persistence layer that runs on Supabase or falls back to localStorage.</li>
               </ul>
             </div>
           </div>
@@ -110,12 +111,13 @@ function Resume() {
           <div className='main-con'>
             <div className='first-con'>
               <p>Visualization of Data Structures &amp; Algorithms</p>
-              <p>D3.js, JavaScript</p>
+              <p>D3.js, JavaScript, SVG, PWA / Service Workers</p>
             </div>
             <div className='second-con'>
               <ul>
-                <li>Developed interactive visualizations of trees, heaps, graphs, and sorting algorithms using D3.js and SVG rendering.</li>
-                <li>Created reusable visualization modules and asynchronous, event-driven interactions to improve engagement and maintainability.</li>
+                <li>Built animated, step-by-step visualizations of eight data structures (array, linked list, stack, queue, hash table, BST, heap, graph) and six sorting algorithms, using D3.js and SVG rendering plus a 3D force-directed graph explorer.</li>
+                <li>Refactored the codebase into a registry-driven module architecture that separates data-structure logic, renderers, and page controllers, keeping the project a zero-build static site with no toolchain to maintain.</li>
+                <li>Delivered it as an installable PWA with a service worker caching the app shell, so all visualizations remain fully usable offline.</li>
               </ul>
             </div>
           </div>
@@ -123,12 +125,13 @@ function Resume() {
           <div className='main-con'>
             <div className='first-con'>
               <p>Hide &amp; Seek Pathfinding Visualizer</p>
-              <p>React, JavaScript</p>
+              <p>React 18, Vite, JavaScript</p>
             </div>
             <div className='second-con'>
               <ul>
-                <li>Developed an interactive pathfinding platform demonstrating Dijkstra's shortest-path algorithm and procedural maze generation.</li>
-                <li>Designed reusable React component architecture and state-management patterns supporting dynamic route analysis and visualization.</li>
+                <li>Implemented and animated six graph-search algorithms — Dijkstra, A*, BFS, DFS, greedy best-first, and bidirectional search — over a weighted grid with variable terrain cost and procedurally generated mazes.</li>
+                <li>Built a benchmarking mode that races all six on an identical map and plots path cost against cells explored, selecting the best fit by a lexicographic rule (optimal route first, then fewest nodes expanded).</li>
+                <li>Designed a reusable React component architecture and state-management model supporting live grid editing, preset scenarios, and comparative route analysis.</li>
               </ul>
             </div>
           </div>
@@ -197,6 +200,7 @@ function Resume() {
               <div className='list'>MVVM</div>
               <div className='list'>Python</div>
               <div className='list'>JavaScript</div>
+              <div className='list'>TypeScript</div>
               <div className='list'>React</div>
               <div className='list'>Node.js</div>
               <div className='list'>D3.js</div>
@@ -218,6 +222,8 @@ function Resume() {
               <div className='list'>Azure DevOps</div>
               <div className='list'>Git</div>
               <div className='list'>SQL</div>
+              <div className='list'>PostgreSQL</div>
+              <div className='list'>Supabase</div>
               <div className='list'>MongoDB</div>
               <div className='list'>MySQL</div>
               <div className='list'>ACC</div>

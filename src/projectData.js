@@ -126,13 +126,14 @@ export const projectDataBIM = [
 
 export const projectDataCS = [
   {
-    title: "UNO Card Web Game",
-    des: "Web-based multiplayer UNO card game using JavaScript, Express, and MongoDB",
+    title: "UNO Multiplayer Web Game",
+    des: "Real-time online UNO built with React, TypeScript, and Supabase — play friends by room code, or three AI opponents",
     link: "http://troyyu527.github.io/uno-web-game",
     jobs: [
-      "Developed heuristic algorithm for non-human AI players, enhancing user experience.",
-      "Implemented modularized gameplay interface with CSS animations and real-time interactions.",
-      "Ensured user game account management and security for real-time game saving/loading."
+      "Built real-time multiplayer over Supabase Realtime: 4-digit room codes, live presence, and reconnect — a single-writer authority model keeps every client in step without a game server.",
+      "Kept the table playing through disconnects — an abandoned seat passes to the AI, and a latecomer can drop into it mid-game.",
+      "Wrote the rules as a pure, immutable TypeScript engine driving a heuristic AI, covered by 66 unit tests including full simulated games.",
+      "Rebuilt the client on Vite, React 18, TypeScript, Zustand, and Tailwind, with a backend-agnostic auth/save layer that runs on Supabase or falls back to localStorage."
     ],
     img: [
       "./img/CS/UNO/main.png",
@@ -145,12 +146,13 @@ export const projectDataCS = [
   },
   {
     title: "Visualization of Data Structures & Sorting Algorithms",
-    des: "Interactive visualization of data structures and sorting algorithms using D3.js and jQuery",
+    des: "Animated walkthroughs of 8 data structures and 6 sorting algorithms, D3.js-driven and installable offline",
     link: "http://troyyu527.github.io/visual-algo",
     jobs: [
-      "Designed and developed visualizations for trees, heaps, and graphs.",
-      "Enhanced user input management and asynchronous processing with jQuery.",
-      "Created reusable modules for efficient and maintainable codebase."
+      "Animated eight data structures — array, linked list, stack, queue, hash table, binary search tree, heap, and graph — each stepping through its own insert, search, and delete operations.",
+      "Visualized six sorting algorithms (bubble, insertion, selection, merge, quick, heap) with live comparison and swap animations, plus a 3D force-directed graph explorer.",
+      "Ships as an installable PWA with a service worker caching the app shell, so every visualization keeps working offline.",
+      "Refactored the codebase into a registry-driven module structure separating data structures, renderers, and page controllers — a zero-build static site with no toolchain to maintain."
     ],
     img: [
       "./img/CS/Visual-Data/data-tree.png",
@@ -160,13 +162,14 @@ export const projectDataCS = [
     ],
   },
   {
-    title: "Hide & Seek",
-    des: "Interactive web-based maze game with Dijkstra’s algorithm implemented in React",
+    title: "Hide & Seek Pathfinding Visualizer",
+    des: "Race six pathfinding algorithms across a weighted grid and see which one actually suits the map",
     link: "http://troyyu527.github.io/hidenseek",
     jobs: [
-      "Developed robust React component structure and efficient state management.",
-      "Integrated Recursive Backtracking algorithm for random maze layouts.",
-      "Implemented user-friendly graphical web UI for maze creation and customization."
+      "Implemented six search algorithms — Dijkstra, A*, BFS, DFS, Greedy best-first, and bidirectional search — animated cell by cell as they explore.",
+      "Built a comparison mode that races them on the same map and plots cost against cells explored, recommending the best fit by a lexicographic rule: optimal route first, then least work.",
+      "Modelled weighted terrain, so sand costs more to cross than open ground and the algorithms visibly diverge on where they're willing to go.",
+      "Designed an editable grid with wall painting, random maze generation, and preset scenarios, on a React 18 + Vite component architecture."
     ],
     img: [
       "./img/CS/HideNSeek/main.png",
