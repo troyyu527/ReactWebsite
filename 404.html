@@ -24,7 +24,11 @@
         // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
         // https://username.github.io/repo-name/?p=/one/two&q=a=b~and~c=d#qwe
         // Otherwise, leave segmentCount as 0.
-        var segmentCount = 0;
+        // This site is a Project Pages site served from /ReactWebsite/, so the
+        // first path segment is the repo directory, not a route. It must be
+        // kept out of the redirect — with 0 here, /ReactWebsite/Resume was sent
+        // to the domain root and every deep link 404'd.
+        var segmentCount = 1;
 
         var l = window.location;
         l.replace(
