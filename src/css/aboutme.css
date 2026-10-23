@@ -1,0 +1,225 @@
+/*-- -------------------------- -->
+<---          About Me          -->
+<--- -------------------------- -*/
+
+#sbsr-333 {
+  padding: clamp(2.5rem, 5vw, 5rem) 1rem;
+}
+#sbsr-333 .cs-container {
+  width: 100%;
+  max-width: 75rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 5rem);
+}
+
+/* ---------- Content ---------- */
+#sbsr-333 .cs-content {
+  text-align: left;
+  width: 100%;
+  max-width: 36rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#sbsr-333 .cs-title {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  margin-bottom: 0.25rem;
+}
+#sbsr-333 .cs-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+  margin-bottom: 1.25rem;
+}
+#sbsr-333 .cs-text {
+  margin-bottom: 1.75rem;
+}
+#sbsr-333 .cs-expertise-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy-700);
+  margin-bottom: 0.9rem;
+}
+#sbsr-333 .cs-ul {
+  width: 100%;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.25rem;
+}
+#sbsr-333 .cs-li {
+  font-size: 0.92rem;
+  line-height: 1.4em;
+  list-style: none;
+  color: var(--headerColor);
+  font-weight: 500;
+  position: relative;
+  padding-left: 1.6rem;
+}
+#sbsr-333 .cs-li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 5px;
+  background: var(--accent-soft);
+  /* check mark */
+  background-image: linear-gradient(var(--accent), var(--accent));
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='black' d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>") center / 0.8rem no-repeat,
+    linear-gradient(#000, #000);
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='black' d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>") center / 0.8rem no-repeat;
+}
+
+/* ---------- Buttons ---------- */
+#sbsr-333 .cs-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+#sbsr-333 .cs-button-solid {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  min-width: 9.5rem;
+  padding: 0.85rem 1.6rem;
+  background: var(--navy-800);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: background-color 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+#sbsr-333 .cs-button-solid:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+#sbsr-333 .cs-button-ghost {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--navy-800);
+  min-width: 9.5rem;
+  padding: 0.85rem 1.6rem;
+  background: transparent;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s, transform 0.2s;
+}
+#sbsr-333 .cs-button-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ---------- Image ---------- */
+#sbsr-333 .cs-image-group {
+  position: relative;
+  width: clamp(17rem, 40vw, 22rem);
+  flex: none;
+}
+#sbsr-333 .cs-image-group:before {
+  /* accent panel behind photo */
+  content: "";
+  position: absolute;
+  inset: -1.1rem -1.1rem 2.5rem 1.4rem;
+  border-radius: 20px;
+  background: linear-gradient(150deg, var(--navy-700), var(--accent));
+  opacity: 0.14;
+  z-index: 0;
+}
+#sbsr-333 .cs-image-group:after {
+  /* thin accent frame, offset */
+  content: "";
+  position: absolute;
+  inset: 1rem -1.4rem -1.4rem 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 20px;
+  opacity: 0.5;
+  z-index: 0;
+}
+#sbsr-333 .cs-picture {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 5px solid #fff;
+}
+#sbsr-333 .cs-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+#sbsr-333 .cs-box {
+  position: absolute;
+  z-index: 2;
+  right: -1rem;
+  bottom: 1.2rem;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  background: linear-gradient(150deg, var(--accent), var(--navy-700));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  box-shadow: var(--shadow-md);
+}
+#sbsr-333 .cs-number {
+  font-size: 2.4rem;
+  line-height: 1;
+  font-weight: 800;
+  color: #fff;
+}
+#sbsr-333 .cs-desc {
+  font-size: 0.72rem;
+  line-height: 1.2em;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* ---------- Desktop ---------- */
+@media only screen and (min-width: 64rem) {
+  #sbsr-333 .cs-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+  #sbsr-333 .cs-content {
+    order: 1;
+  }
+  #sbsr-333 .cs-image-group {
+    order: 2;
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+  #sbsr-333 .cs-ul {
+    grid-template-columns: 1fr;
+  }
+  #sbsr-333 .cs-button-solid,
+  #sbsr-333 .cs-button-ghost {
+    flex: 1;
+  }
+}

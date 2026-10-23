@@ -1,0 +1,169 @@
+$color-primary: #4c4c4c;
+$color-secondary: #a6a6a6;
+$color-highlight: #ff3f40;
+/* ----- Prodject Section ----- */
+.proj {
+	display: grid;
+	grid-template-columns: 0.9fr 1fr;
+	margin-top: 1rem;
+	margin-bottom: 5rem;
+	padding: 2.5em 0;
+	min-width: 600px;
+	background-color: white;
+	min-height: 600px;
+	border-radius: 5px;
+}
+
+/* ----- Photo Section ----- */
+.proj-photo {
+	position: relative;
+}
+
+.photo-container {
+	position: absolute;
+	left: -2.5em;
+	display: grid;
+	grid-template-rows: 1fr;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.3);
+}
+
+.photo-main {
+  height:100%;
+	width: 100%;
+	//border-radius: 10px 10px 0 0;
+	//background-color: #9be010;
+	//background: radial-gradient(#e5f89e, #96e001);
+
+	img {
+		position: absolute;
+		
+		//left: -3.5em;
+		//top: 2em;
+		width: 100%;
+    height: 100%;
+	}
+}
+
+.photo-album {
+	background-size: contain;
+	padding: 0.5rem 0.5rem;
+	border-radius: 0 0 6px 6px;
+	background-color: #fff;
+
+	ul {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	li {
+		float: left;
+		width: 55px;
+		height: 55px;
+		//padding: 1px;
+		//border: 2px solid $color-secondary;
+		border-radius: 5px;
+		list-style: none;
+		
+	}
+	
+	
+  
+}
+
+/* ----- Informations Section ----- */
+.proj-info {
+	padding: 0.8em 0;
+}
+b{
+	text-decoration: underline;
+}
+.title {
+	h1 {
+		margin-bottom: 0.1em;
+		color: $color-primary;
+		font-size: 1.5em;
+		font-weight: 900;
+	}
+
+	div {
+		margin-top: 1rem;
+		font-size: 0.7em;
+		color: $color-secondary;
+	}
+}
+
+.description {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin: 2em 0;
+
+	h3 {
+		margin-bottom: 1em;
+		margin-left: 0;
+	}
+
+	ul {
+		font-size: 0.8em;
+		list-style: disc;
+		margin-left: 1em;
+	}
+
+	li {
+		//text-indent: -0.6em;
+		margin-bottom: 0.5em;
+	}
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8em;
+  color: red;
+  margin: 1rem;
+  div{cursor: pointer;}
+}
+.forward {
+  transform: translateX(0);
+}
+
+.backward {
+  transform: translateX(-100%);
+}
+// .buy--btn {
+// 	padding: 1.5em 3.1em;
+// 	border: none;
+// 	border-radius: 7px;
+// 	font-size: 0.8em;
+// 	font-weight: 700;
+// 	letter-spacing: 1.3px;
+// 	color: #fff;
+// 	background-color: $color-highlight;
+// 	box-shadow: 2px 2px 25px -7px $color-primary;
+// 	cursor: pointer;
+
+// 	&:active {
+// 		transform: scale(0.97);
+// 	}
+// }
+/* ----- Web Apps gallery (CSlide): image window matched to the screenshots ----- */
+// NOTE: this .scss is stale — the live proj_slide.css was hand-rewritten
+// (flexbox + CSS custom properties) and is what React imports. Recompiling
+// this file would regress the design. Kept in sync only for reference.
+//
+// 2:1 is measured, not guessed: the eleven full-window screenshots range
+// 1.99-2.21 with a mean of 2.07, so a 2:1 frame holds them edge to edge.
+// (16:9 = 1.78 was still too tall and left bars.) `contain` guarantees
+// nothing is ever cut off, whatever the ratio.
+.proj-cs {
+	.photo-main {
+		aspect-ratio: 2 / 1;
+	}
+
+	.selected-main {
+		background-size: contain;
+		background-color: #f1f5fb;
+	}
+}

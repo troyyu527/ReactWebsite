@@ -1,0 +1,117 @@
+/* Floating "Ask my AI" button + chat panel (AskMyAI.jsx). Desktop: 400×600 panel; phones: full screen. */
+
+.askai-fab {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.15rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--navy-800, #0d2540);
+  color: #fff;
+  font: 600 0.95rem "Inter", "Roboto", "Arial", sans-serif;
+  box-shadow: var(--shadow-lg, 0 24px 60px -28px rgba(13, 37, 64, 0.4)), 0 4px 14px rgba(13, 37, 64, 0.25);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.askai-fab:hover {
+  background: var(--navy-700, #143456);
+  transform: translateY(-1px);
+}
+.askai-fab:focus-visible,
+.askai-close:focus-visible {
+  outline: 3px solid var(--accent, #2f6fed);
+  outline-offset: 2px;
+}
+.askai-fab.is-hidden {
+  display: none;
+}
+
+.askai-panel {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+  max-height: calc(100vh - 2.5rem);
+  overflow: hidden;
+  border: 1px solid var(--line, #e2e8f0);
+  border-radius: var(--radius, 14px);
+  background: var(--card, #fff);
+  box-shadow: var(--shadow-lg, 0 24px 60px -28px rgba(13, 37, 64, 0.4)), 0 8px 30px rgba(13, 37, 64, 0.18);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
+}
+.askai-panel.is-open {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.askai-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  background: var(--navy-800, #0d2540);
+  color: #fff;
+}
+.askai-title {
+  font: 600 0.95rem "Inter", "Roboto", "Arial", sans-serif;
+}
+.askai-close {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.askai-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.askai-frame {
+  flex: 1;
+  width: 100%;
+  border: 0;
+}
+
+/* Phones: the panel takes the whole screen. */
+@media (max-width: 640px) {
+  .askai-fab {
+    right: 1rem;
+    bottom: 1rem;
+  }
+  .askai-panel {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    border: none;
+    border-radius: 0;
+  }
+  body.askai-open {
+    overflow: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .askai-fab,
+  .askai-panel,
+  .askai-panel.is-open {
+    transition: none;
+  }
+}

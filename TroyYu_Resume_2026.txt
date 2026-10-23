@@ -1,0 +1,122 @@
+HAO "TROY" YU
+
+Software Engineer / BIM & CAD Automation Developer
+
+AREAS OF EXPERTISE
+
+Engineering Software Development ~ BIM & CAD Automation & Delivery ~ AEC API Development
+Desktop / Web Application Development ~ AI-Assisted Engineering Workflows ~ Cloud & Data Integration
+
+TECHNICAL ACUMEN
+
+C# | .NET | WPF | MVVM | Python
+
+JavaScript | TypeScript | React | Node.js | D3.js | Three.js
+
+Revit API | AutoCAD API | Civil3D API | Tekla Open API
+
+Azure DevOps | Git | SQL | PostgreSQL | Supabase | MongoDB | MySQL | ACC | BIM 360
+
+Prompt Engineering | AI-Assisted Development | Large Language Models (LLMs)
+Agentic Workflows | Retrieval-Augmented Generation (RAG)
+Local AI Deployment | Ollama | MCP
+
+RELEVANT EXPERIENCE
+
+BlueScope Buildings North America • Kansas City, MO, USA
+Software Engineer (Contract via Innova Solutions) 01/2026 – 06/2026
+
+• Developed enterprise-grade engineering software applications and Tekla Structures plugins using C#, .NET Framework, WPF, MVVM, and Tekla Open API.
+
+• Designed and implemented engineering automation features for steel building workflows, reducing manual design and detailing effort through API-driven software solutions.
+
+• Developed reusable ViewModels, UI components, and application frameworks following WPF MVVM architecture, leveraging AI-assisted development workflows to improve implementation efficiency and code quality.
+
+• Contributed to the migration of legacy engineering applications into BlueScope's next-generation plugin platform, improving maintainability, scalability, and long-term product support.
+
+• Leveraged AI-assisted development tools and Large Language Models (LLMs) to support code generation, code review, technical research, debugging, documentation, and software migration activities.
+
+• Participated in software architecture discussions, solution design reviews, sprint planning, and technical decision-making activities within an Agile Scrum environment.
+
+AECOM • New York, NY, USA
+
+BIM Supervisor – Digital Solutions 01/2024 – 12/2025
+
+• Spearheaded the development and implementation of BIM standards, digital delivery workflows, and cloud-based collaboration strategies across multidisciplinary project teams.
+
+• Evaluated and integrated emerging BIM technologies, automation tools, APIs, and digital solutions to improve engineering productivity and project delivery efficiency.
+
+• Key Automation & Digital Solutions Contributions:
+
+  – Developed custom Revit API solutions and C# libraries to automate data extraction, model analysis, and integration between CAD, BIM, and external systems.
+
+  – Designed workflow automation solutions using Dynamo, SQL, and Excel, reducing manual processing effort and improving consistency of engineering deliverables.
+
+  – Managed Autodesk Construction Cloud (ACC) deployments, streamlining model coordination, cloud collaboration, and data exchange workflows.
+
+  – Researched and piloted emerging AEC technologies and automation initiatives to support digital transformation and future technology adoption.
+
+  – Performed model validation, quality assurance, and BIM data management activities to ensure compliance with project standards, client requirements, and digital delivery objectives.
+
+Urbantech Consulting Engineering PC • New York, NY, USA
+
+BIM Engineer 10/2014 – 12/2022
+
+• Led the company's transition from traditional CAD-based workflows to BIM-based project delivery, establishing BIM standards, modeling practices, coordination workflows, and digital information management processes across structural engineering projects.
+
+• Utilized Autodesk Revit, AutoCAD, Civil3D, and Navisworks to support BIM coordination, multidisciplinary collaboration, engineering design, drafting, and project delivery activities.
+
+• Key Automation & Software Development Contributions:
+
+  – Developed custom Revit API, AutoCAD API, and Civil3D API solutions using C#, leveraging custom User Attributes and metadata structures to automate data extraction, model management, and interoperability between CAD and BIM platforms.
+
+  – Created reusable software libraries, plugins, and desktop applications that streamlined engineering workflows, reduced repetitive tasks, and improved operational efficiency.
+
+  – Designed automation tools for engineering and detailing processes, including rebar quantity takeoff, bill-of-material generation, Autodesk license management, and project data management solutions.
+
+  – Established automation-driven workflows that improved engineering coordination, reduced manual data processing, and enhanced digital project delivery.
+
+  – Implemented BIM workflows utilizing point cloud technologies, LiDAR scanning data, and model integration processes to support coordination, analysis, and digital delivery initiatives.
+
+  – Researched, evaluated, and piloted emerging AEC technologies, automation solutions, and digital workflows to modernize engineering processes and improve productivity.
+
+SELECTED TECHNICAL PROJECTS
+
+UNO Multiplayer Web Game | React 18, TypeScript, Vite, Zustand, Supabase (PostgreSQL, Realtime, Auth), Tailwind CSS, Vitest
+
+• Architected real-time online multiplayer over Supabase Realtime using a single-writer authority model — the acting seat owns its move, the host owns unattended seats — keeping four clients consistent without a dedicated game server.
+
+• Engineered live-session resilience: presence tracking hands an abandoned seat to the AI, players reconnect into their seat after a refresh, and newcomers claim an AI seat mid-game through an atomic conditional update.
+
+• Implemented the game rules as a pure, immutable TypeScript engine decoupled from React, driving a heuristic weighted-decision AI, and verified it with 66 unit tests covering fully simulated games and card-conservation invariants.
+
+• Migrated the application from Next.js to Vite, React 18, and TypeScript with Zustand state management, behind a backend-agnostic authentication and persistence layer that runs on Supabase or falls back to localStorage.
+
+Visualization of Data Structures & Algorithms | D3.js, JavaScript, SVG, PWA / Service Workers
+
+• Built animated, step-by-step visualizations of eight data structures (array, linked list, stack, queue, hash table, binary search tree, heap, graph) and six sorting algorithms using D3.js and SVG rendering, plus a 3D force-directed graph explorer.
+
+• Refactored the codebase into a registry-driven module architecture separating data-structure logic, renderers, and page controllers, keeping the project a zero-build static site with no toolchain to maintain.
+
+• Delivered the site as an installable Progressive Web App with a service worker caching the application shell, keeping every visualization fully usable offline.
+
+Hide & Seek Pathfinding Visualizer | React 18, Vite, JavaScript
+
+• Implemented and animated six graph-search algorithms — Dijkstra, A*, breadth-first, depth-first, greedy best-first, and bidirectional search — across a weighted grid with variable terrain cost and procedurally generated mazes.
+
+• Built a benchmarking mode that races all six algorithms on an identical map and plots path cost against cells explored, selecting the best fit by a lexicographic rule: optimal route first, then fewest nodes expanded.
+
+• Designed a reusable React component architecture and state-management model supporting live grid editing, preset scenarios, and comparative route analysis.
+
+EDUCATION
+
+Master of Science in Civil Engineering & Engineering Mechanics
+Columbia University • New York, NY
+2014
+
+ADDITIONAL RESEARCH EXPERIENCE
+
+National Taiwan Ocean University – MSV Lab
+Research Assistant – Computational Analysis & Modeling 2009 – 2010
+
+• Developed MATLAB-based engineering models supporting finite element analysis and engineering mechanics research.

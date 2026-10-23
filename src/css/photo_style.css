@@ -1,0 +1,35 @@
+/* ============================================================
+   Project image / thumbnail styling
+   ============================================================ */
+.selected-main,
+.thumbnail {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.selected-main {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.thumbnail {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--line);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.thumbnail:hover {
+  border-color: var(--navy-600);
+  transform: translateY(-2px);
+}
+
+.img-selected {
+  border-color: var(--accent) !important;
+}
+.img-selected:hover {
+  transform: translateY(-2px);
+}
