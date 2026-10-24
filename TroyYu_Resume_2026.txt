@@ -15,7 +15,7 @@ JavaScript | TypeScript | React | Node.js | D3.js | Three.js
 
 Revit API | AutoCAD API | Civil3D API | Tekla Open API
 
-Azure DevOps | Git | SQL | PostgreSQL | Supabase | MongoDB | MySQL | ACC | BIM 360
+Azure DevOps | Git | SQL | PostgreSQL | Supabase | Cloudflare Workers | MongoDB | MySQL | ACC | BIM 360
 
 Prompt Engineering | AI-Assisted Development | Large Language Models (LLMs)
 Agentic Workflows | Retrieval-Augmented Generation (RAG)
@@ -82,15 +82,15 @@ BIM Engineer 10/2014 – 12/2022
 
 SELECTED TECHNICAL PROJECTS
 
-UNO Multiplayer Web Game | React 18, TypeScript, Vite, Zustand, Supabase (PostgreSQL, Realtime, Auth), Tailwind CSS, Vitest
+UNO Multiplayer Web Game | React 18, TypeScript, Vite, Zustand, Cloudflare Workers (D1, Durable Objects, WebSockets), Tailwind CSS, Vitest
 
-• Architected real-time online multiplayer over Supabase Realtime using a single-writer authority model — the acting seat owns its move, the host owns unattended seats — keeping four clients consistent without a dedicated game server.
+• Architected real-time online multiplayer on Cloudflare Durable Objects and WebSockets using a single-writer authority model — the acting seat owns its move, the host owns unattended seats — keeping four clients consistent while the game rules run entirely in the browser.
 
-• Engineered live-session resilience: presence tracking hands an abandoned seat to the AI, players reconnect into their seat after a refresh, and newcomers claim an AI seat mid-game through an atomic conditional update.
+• Engineered live-session resilience: presence tracking hands an abandoned seat to the AI, players reconnect into their seat after a refresh, and newcomers claim an AI seat mid-game through atomic, server-serialized seat claims.
 
 • Implemented the game rules as a pure, immutable TypeScript engine decoupled from React, driving a heuristic weighted-decision AI, and verified it with 66 unit tests covering fully simulated games and card-conservation invariants.
 
-• Migrated the application from Next.js to Vite, React 18, and TypeScript with Zustand state management, behind a backend-agnostic authentication and persistence layer that runs on Supabase or falls back to localStorage.
+• Migrated the application from Next.js to Vite, React 18, and TypeScript with Zustand state management, behind a backend-agnostic authentication and persistence layer that runs on a Cloudflare Worker (D1, JWT sessions) or falls back to localStorage.
 
 Visualization of Data Structures & Algorithms | D3.js, JavaScript, SVG, PWA / Service Workers
 

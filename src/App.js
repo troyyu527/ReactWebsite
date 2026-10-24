@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import { BrowserRouter } from 'react-router-dom';
 import Menubar from './components/Menubar';
 import Resume from './components/Resume';
@@ -7,7 +7,8 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Aboutme from './components/Aboutme';
 import WebApps from './components/WebApps';
-import SampleModel from './components/SampleModel';
+import BimSoftware from './components/BimSoftware';
+import AIProjects from './components/AIProjects';
 import AskMyAI from './components/AskMyAI';
 import './css/App.css';
 
@@ -22,6 +23,8 @@ function Footer() {
           <Link to="/Resume">Resume</Link>
           <Link to="/Projects">Projects</Link>
           <Link to="/WebApps">Web Apps</Link>
+          <Link to="/BIMSoftware">BIM Software</Link>
+          <Link to="/AIProjects">AI Projects</Link>
           <Link to="/Contact">Contact</Link>
           <a href="https://github.com/troyyu527" target="_blank" rel="noreferrer noopener">GitHub</a>
           <a href="https://www.linkedin.com/in/troy-yu-5244b694" target="_blank" rel="noreferrer noopener">LinkedIn</a>
@@ -44,7 +47,10 @@ function App() {
             <Route path="/Resume" exact element={<Resume />} />
             <Route path="/Projects" exact element={<Projects />} />
             <Route path="/WebApps" exact element={<WebApps />} />
-            <Route path="/3Dsample" exact element={<SampleModel />} />
+            <Route path="/BIMSoftware" exact element={<BimSoftware />} />
+            <Route path="/AIProjects" exact element={<AIProjects />} />
+            {/* old link to the removed 3D viewer page */}
+            <Route path="/3Dsample" element={<Navigate to="/BIMSoftware" replace />} />
             <Route path="/Contact" exact element={<Contact />} />
           </Routes>
           <Footer />

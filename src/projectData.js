@@ -127,13 +127,13 @@ export const projectDataBIM = [
 export const projectDataCS = [
   {
     title: "UNO Multiplayer Web Game",
-    des: "Real-time online UNO built with React, TypeScript, and Supabase — play friends by room code, or three AI opponents",
+    des: "Real-time online UNO built with React, TypeScript, and Cloudflare Workers — play friends by room code, or three AI opponents",
     link: "http://troyyu527.github.io/uno-web-game",
     jobs: [
-      "Built real-time multiplayer over Supabase Realtime: 4-digit room codes, live presence, and reconnect — a single-writer authority model keeps every client in step without a game server.",
+      "Built real-time multiplayer on Cloudflare Durable Objects and WebSockets: 4-digit room codes, live presence, and reconnect — a single-writer authority model keeps every client in step while the game rules run in the browser.",
       "Kept the table playing through disconnects — an abandoned seat passes to the AI, and a latecomer can drop into it mid-game.",
-      "Wrote the rules as a pure, immutable TypeScript engine driving a heuristic AI, covered by 66 unit tests including full simulated games.",
-      "Rebuilt the client on Vite, React 18, TypeScript, Zustand, and Tailwind, with a backend-agnostic auth/save layer that runs on Supabase or falls back to localStorage."
+      "Wrote the rules as a pure, immutable TypeScript engine driving a heuristic AI.",
+      "Rebuilt the client on Vite, React 18, TypeScript, Zustand, and Tailwind, with a backend-agnostic auth/save layer that runs on a Cloudflare Worker (D1) or falls back to localStorage."
     ],
     img: [
       "./img/CS/UNO/main.png",
@@ -151,7 +151,7 @@ export const projectDataCS = [
     jobs: [
       "Animated eight data structures — array, linked list, stack, queue, hash table, binary search tree, heap, and graph — each stepping through its own insert, search, and delete operations.",
       "Visualized six sorting algorithms (bubble, insertion, selection, merge, quick, heap) with live comparison and swap animations, plus a 3D force-directed graph explorer.",
-      "Ships as an installable PWA with a service worker caching the app shell, so every visualization keeps working offline.",
+      "Added a live metrics HUD that counts comparisons, swaps, and elapsed time as each sort runs, shown next to its best, average, and worst-case Big-O, with pause/resume and adjustable speed, array size, and value range.",
       "Refactored the codebase into a registry-driven module structure separating data structures, renderers, and page controllers — a zero-build static site with no toolchain to maintain."
     ],
     img: [
@@ -177,6 +177,51 @@ export const projectDataCS = [
       "./img/CS/HideNSeek/maze.png",
     ],
   },
+  
+]
+
+// BIM Software page — Windows desktop tools for IFC / openBIM models.
+export const projectDataBIMSoftware = [
+  {
+    title: "IFC Viewer",
+    des: "A Windows desktop viewer for IFC building models — 3D view, picking, properties and an object tree",
+    link: "https://github.com/troyyu527/IFCViewer",
+    linkLabel: "GITHUB",
+    jobs: [
+      "Built in C# / WPF (MVVM) on xBIM: opens IFC2x3 and IFC4 files from small samples to several hundred MB on a background thread, in the file's own colors with Revit-style category defaults.",
+      "Rendered with HelixToolkit (DirectX 11): orbit, pan and zoom, click and Ctrl+click picking with a blue highlight, isolate / hide / reset, and an object tree linked both ways with the 3D selection.",
+      "Properties panel with attributes, property sets, quantities and materials in feet-inches; search by Revit Element ID.",
+      "Large-file engineering: models over 100 MB move to xBIM's on-disk storage, so models of several hundred MB with tens of thousands of elements open without running out of memory."
+    ],
+    img: [
+      "./img/BIM-Software/IfcViewer/building.png",
+      "./img/BIM-Software/IfcViewer/properties.png",
+      "./img/BIM-Software/IfcViewer/hvac.png",
+      "./img/BIM-Software/IfcViewer/house.png",
+    ],
+  },
+  {
+    title: "Engineering Model QA",
+    status: "In progress",
+    des: "A Windows desktop workbench that checks IFC4 models against rule profiles and compares two revisions — Resolved, Persistent or New",
+    link: "https://github.com/troyyu527/EngineeringModelQA",
+    linkLabel: "GITHUB",
+    jobs: [
+      "Model Check: five rule types — required property, unique value, naming pattern, material and storey assigned — run on a background thread with progress and cancel; findings show expected vs. observed values and guidance.",
+      "Revision Compare: elements match by IFC GlobalId and findings by rule, GlobalId and a stable condition key, so a finding on a deleted element is never counted as resolved.",
+      "C# / .NET Framework 4.8, WPF + MVVM and xBIM, with rules kept free of WPF and xBIM; fully offline and deterministic."
+    ],
+    img: [
+      "./img/BIM-Software/EngineeringModelQA/model-check.png",
+      "./img/BIM-Software/EngineeringModelQA/revision-compare.png",
+      "./img/BIM-Software/EngineeringModelQA/structural-check.png",
+      "./img/BIM-Software/EngineeringModelQA/settings.png",
+    ],
+  },
+]
+
+// AI Projects page — LLM and agent projects.
+export const projectDataAI = [
   {
     title: "AI Career Assistant",
     des: "Ask my AI twin about my career — a RAG chatbot over my own knowledge base, with sources and project media",
@@ -184,14 +229,28 @@ export const projectDataCS = [
     backup: { label: "Hugging Face version (Python, Gradio)", link: "https://troy0527-troy-ai-persona.hf.space" },
     jobs: [
       "Built retrieval-augmented generation (RAG) over a curated knowledge base of my career: questions are rewritten with the conversation, searched in a vector index, and answered in my voice from the retrieved facts only.",
-      "Streams answers from a TypeScript API (LangChain.js) with source chips, project photos and simulation videos; guarded with rate limits, an origin allow-list and honest \"I don't know\" and NDA rules.",
-      "Measured with a 34-question golden set (retrieval MRR 0.82, answers 4.9/5 by an LLM judge) and 89 unit tests; also on this site as the \"Ask my AI\" button."
+      "Streams answers from a Cloudflare Worker (TypeScript, LangChain.js) on Workers AI and Vectorize, with source chips, project photos and simulation videos; guarded with rate limits, an origin allow-list and honest \"I don't know\" and NDA rules.",
+      "Measured with a 34-question golden set (retrieval MRR 0.82, answers 4.9/5 by an LLM judge); also on this site as the \"Ask my AI\" button."
     ],
     img: [
-      "./img/CS/AIAssistant/main.png",
-      "./img/CS/AIAssistant/answer-media.png",
-      "./img/CS/AIAssistant/portfolio-panel.png",
+      "./img/AI/AIAssistant/main.png",
+      "./img/AI/AIAssistant/answer-media.png",
+      "./img/AI/AIAssistant/portfolio-panel.png",
     ],
   },
-  
+  {
+    title: "BIM AI Agent",
+    status: "In progress",
+    des: "An engineering-aware AI agent platform that reviews and edits IFC models in the browser — answers with building-code evidence, changes only with human approval",
+    linkNote: "In development · design mockups shown",
+    jobs: [
+      "Three LangGraph agents — Planner, Executor and Validator — work over a Neo4j knowledge graph of the model and a Qdrant RAG of New York building codes: 168 official PDFs parsed into 7,045 citation-ready chunks.",
+      "LLMs plan, deterministic tools execute: the model produces a validated JSON change plan and an MCP tool server (FastMCP + IfcOpenShell) edits the IFC; every change needs the user's approval and can be undone.",
+      "A C# / .NET 8 + xBIM engine turns large IFC files into per-storey 3D geometry for a React / Three.js viewer; a local LLM (Ollama) is the default for privacy. Architecture and an 11-step plan are done; implementation is under way."
+    ],
+    img: [
+      "./img/AI/BimAiAgent/mockup-overview.jpg",
+      "./img/AI/BimAiAgent/mockup-views.jpg",
+    ],
+  },
 ]

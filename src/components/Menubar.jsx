@@ -6,7 +6,8 @@ const NAV_LINKS = [
   { to: "/Resume", label: "RESUME" },
   { to: "/Projects", label: "PROJECTS" },
   { to: "/WebApps", label: "WEB APPS" },
-  { to: "/3Dsample", label: "3D VIEWER" },
+  { to: "/BIMSoftware", label: "BIM SOFTWARE" },
+  { to: "/AIProjects", label: "AI PROJECTS" },
   { to: "/Contact", label: "CONTACT" },
 ]
 

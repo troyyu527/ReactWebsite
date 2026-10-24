@@ -2,12 +2,13 @@
 
 The personal portfolio and résumé site for **Hao "Troy" Yu**, Software Engineer /
 BIM & CAD Automation Developer. It presents professional experience, engineering
-(BIM) project work, self-built web applications, and a contact route, as a
-single-page React app.
+(BIM) project work, self-built web apps, BIM desktop software and AI projects,
+and a contact route, as a single-page React app — with an **Ask my AI** button
+that opens Troy's AI career assistant.
 
 **Live:** <https://troyyu527.github.io/ReactWebsite>
 
-![The portfolio's About page: name, title, areas of expertise and the navigation to Resume, Projects, Web Apps, 3D Viewer and Contact](docs/images/screenshot.png)
+![The portfolio's About page: name, title, areas of expertise and the navigation to Resume, Projects, Web Apps, BIM Software, AI Projects and Contact](docs/images/screenshot.png)
 
 ## Pages
 
@@ -17,10 +18,14 @@ single-page React app.
 | `/Resume` | Résumé | Experience, selected technical projects, education, skills — plus a PDF download |
 | `/Projects` | BIM Projects | AEC/construction work: LaGuardia, Kosciuszko Bridge, Goethals Bridge, and others, with photo and video galleries |
 | `/WebApps` | Web Apps | Self-built software: UNO Multiplayer, VisualAlgo, Hide & Seek |
-| `/3Dsample` | 3D Sample | A Three.js viewer loading an `.obj` mesh, with orbit controls |
+| `/BIMSoftware` | BIM Software | Windows desktop tools for IFC / openBIM: IFC Viewer, Engineering Model QA |
+| `/AIProjects` | AI Projects | LLM and agent projects: AI Career Assistant, BIM AI Agent |
 | `/Contact` | Contact | Form that composes a pre-filled email via `mailto:` |
 
-Project content is data-driven: both galleries render from
+The old `/3Dsample` page (a Three.js viewer) was retired; its link redirects to
+`/BIMSoftware`.
+
+Project content is data-driven: every gallery renders from
 [`src/projectData.js`](src/projectData.js), so adding a project means adding an
 object, not writing a component.
 
@@ -31,7 +36,6 @@ object, not writing a component.
 | Framework | **React 18** |
 | Build tool | **Create React App** (`react-scripts` 5) |
 | Routing | **React Router 6** (`BrowserRouter`, `basename` from `PUBLIC_URL`) |
-| 3D | **Three.js** — `OBJLoader`, `OrbitControls` |
 | Styling | SCSS → CSS |
 | Deploy | GitHub Pages via `gh-pages` |
 
@@ -59,9 +63,10 @@ npm run deploy       # runs predeploy (build) then publishes build/ to gh-pages
 asset paths and the router `basename` resolve correctly under `/ReactWebsite/`.
 
 > **Routing note:** this uses `BrowserRouter`, not `HashRouter`. GitHub Pages has
-> no server-side rewrites, so loading a deep link such as `/ReactWebsite/Resume`
-> directly can 404 — navigating from within the app always works. If direct deep
-> links matter, either switch to `HashRouter` or add a `404.html` redirect shim.
+> no server-side rewrites, so a deep link such as `/ReactWebsite/Resume` would
+> 404 on its own. [`public/404.html`](public/404.html) (the
+> [spa-github-pages](https://github.com/rafrex/spa-github-pages) shim) turns it
+> into a query string that `public/index.html` restores before the app loads.
 
 ## Project layout
 
@@ -77,12 +82,13 @@ src/
     Resume.jsx                 résumé content
     Projects.jsx               BIM gallery      (reads projectDataBIM)
     WebApps.jsx                web app gallery  (reads projectDataCS)
-    SampleModel.jsx            Three.js viewer
+    BimSoftware.jsx            BIM software     (reads projectDataBIMSoftware)
+    AIProjects.jsx             AI projects      (reads projectDataAI)
+    AskMyAI.jsx                "Ask my AI" button → AI career assistant
     Contact.jsx                contact form (mailto)
     Menubar.jsx                navigation
     Slide.jsx / CSlide.jsx     image & content carousels
   css/                         SCSS sources and compiled CSS
-  obj/                         3D model asset
   profile/                     photos and icons
 TroyYu_Resume_2026.txt         résumé source text (not published — outside public/)
 ```
@@ -90,8 +96,11 @@ TroyYu_Resume_2026.txt         résumé source text (not published — outside p
 ## Updating content
 
 - **Projects** — edit [`src/projectData.js`](src/projectData.js).
-  `projectDataBIM` feeds `/Projects`, `projectDataCS` feeds `/WebApps`. Image
-  paths are relative to `public/`.
+  `projectDataBIM` feeds `/Projects`, `projectDataCS` feeds `/WebApps`,
+  `projectDataBIMSoftware` feeds `/BIMSoftware` and `projectDataAI` feeds
+  `/AIProjects`. Image paths are relative to `public/`. Optional fields:
+  `status` (a badge such as "In progress"), `linkLabel` (button text instead of
+  ENTER), `linkNote` (shown when there's no link) and `backup` (a second link).
 - **Résumé (page)** — edit [`src/components/Resume.jsx`](src/components/Resume.jsx).
 - **Résumé (PDF)** — regenerate from `TroyYu_Resume_2026.txt` and replace
   `public/download/TroyYu_Resume.pdf`. Keep the two in step; the page and the
@@ -99,7 +108,5 @@ TroyYu_Resume_2026.txt         résumé source text (not published — outside p
 
 ## Housekeeping notes
 
-- `@emailjs/browser` is listed as a dependency but isn't used — the contact form
-  builds a `mailto:` link instead. Safe to remove.
 - `npm run build` with `CI=true` treats warnings as errors, so a stray lint
   warning will fail a CI deploy even though a local build passes.

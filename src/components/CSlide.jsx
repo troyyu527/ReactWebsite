@@ -32,9 +32,13 @@ export const CSlide = ({ project }) => {
 			</div>
 			<div className="proj-info">
 				<div className="title">
-					<h1>{title}</h1>
+					<h1>{title}{project.status && <span className="cs-status">{project.status}</span>}</h1>
 					<div>{des}</div>
-					<nav style={{marginTop:"3rem"}}>➔<a href={link} target="_blank" rel="noreferrer noopener"><b>ENTER</b></a></nav>
+					{link ? (
+						<nav style={{marginTop:"3rem"}}>➔<a href={link} target="_blank" rel="noreferrer noopener"><b>{project.linkLabel || "ENTER"}</b></a></nav>
+					) : (
+						project.linkNote && <p className="cs-note">{project.linkNote}</p>
+					)}
 					{project.backup && (
 						<p className="cs-backup">Backup: <a href={project.backup.link} target="_blank" rel="noreferrer noopener">{project.backup.label} ↗</a></p>
 					)}

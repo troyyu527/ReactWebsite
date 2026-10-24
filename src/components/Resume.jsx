@@ -96,14 +96,14 @@ function Resume() {
           <div className='main-con'>
             <div className='first-con'>
               <p>UNO Multiplayer Web Game</p>
-              <p>React, TypeScript, Vite, Zustand, Supabase (PostgreSQL/Realtime), Tailwind, Vitest</p>
+              <p>React, TypeScript, Vite, Zustand, Cloudflare Workers (D1, Durable Objects), Tailwind, Vitest</p>
             </div>
             <div className='second-con'>
               <ul>
-                <li>Architected real-time online multiplayer on Supabase Realtime using a single-writer authority model — the acting seat owns its move and the host owns unattended seats — keeping four clients consistent with no dedicated game server.</li>
-                <li>Engineered resilience into live sessions: presence tracking hands an abandoned seat to the AI, players reconnect into their seat after a refresh, and newcomers can claim an AI seat mid-game via an atomic conditional update.</li>
+                <li>Architected real-time online multiplayer on Cloudflare Durable Objects and WebSockets using a single-writer authority model — the acting seat owns its move and the host owns unattended seats — keeping four clients consistent while the game rules run entirely in the browser.</li>
+                <li>Engineered resilience into live sessions: presence tracking hands an abandoned seat to the AI, players reconnect into their seat after a refresh, and newcomers can claim an AI seat mid-game through atomic, server-serialized seat claims.</li>
                 <li>Implemented the rules as a pure, immutable TypeScript engine independent of React, driving a heuristic weighted-decision AI, and covered it with 66 unit tests including fully simulated games and card-conservation invariants.</li>
-                <li>Migrated the application from Next.js to Vite + React 18 + TypeScript with Zustand state management, behind a backend-agnostic auth and persistence layer that runs on Supabase or falls back to localStorage.</li>
+                <li>Migrated the application from Next.js to Vite + React 18 + TypeScript with Zustand state management, behind a backend-agnostic auth and persistence layer that runs on a Cloudflare Worker (D1, JWT sessions) or falls back to localStorage.</li>
               </ul>
             </div>
           </div>
@@ -111,13 +111,13 @@ function Resume() {
           <div className='main-con'>
             <div className='first-con'>
               <p>Visualization of Data Structures &amp; Algorithms</p>
-              <p>D3.js, JavaScript, SVG, PWA / Service Workers</p>
+              <p>D3.js, JavaScript, SVG, jQuery UI</p>
             </div>
             <div className='second-con'>
               <ul>
                 <li>Built animated, step-by-step visualizations of eight data structures (array, linked list, stack, queue, hash table, BST, heap, graph) and six sorting algorithms, using D3.js and SVG rendering plus a 3D force-directed graph explorer.</li>
                 <li>Refactored the codebase into a registry-driven module architecture that separates data-structure logic, renderers, and page controllers, keeping the project a zero-build static site with no toolchain to maintain.</li>
-                <li>Delivered it as an installable PWA with a service worker caching the app shell, so all visualizations remain fully usable offline.</li>
+                <li>Added a live metrics HUD that tracks comparisons, swaps, and elapsed time during each sort, displayed alongside best, average, and worst-case Big-O complexity, with pause/resume and adjustable speed, array size, and value range.</li>
               </ul>
             </div>
           </div>
@@ -224,6 +224,7 @@ function Resume() {
               <div className='list'>SQL</div>
               <div className='list'>PostgreSQL</div>
               <div className='list'>Supabase</div>
+              <div className='list'>Cloudflare Workers</div>
               <div className='list'>MongoDB</div>
               <div className='list'>MySQL</div>
               <div className='list'>ACC</div>
