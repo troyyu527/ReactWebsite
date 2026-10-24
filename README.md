@@ -5,7 +5,9 @@ BIM & CAD Automation Developer. It presents professional experience, engineering
 (BIM) project work, self-built web applications, and a contact route, as a
 single-page React app.
 
-**Live:** <http://troyyu527.github.io/ReactWebsite>
+**Live:** <https://troyyu527.github.io/ReactWebsite>
+
+![The portfolio's About page: name, title, areas of expertise and the navigation to Resume, Projects, Web Apps, 3D Viewer and Contact](docs/images/screenshot.png)
 
 ## Pages
 
