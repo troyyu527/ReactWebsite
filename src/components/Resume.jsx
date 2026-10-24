@@ -222,8 +222,6 @@ function Resume() {
               <div className='list'>Azure DevOps</div>
               <div className='list'>Git</div>
               <div className='list'>SQL</div>
-              <div className='list'>PostgreSQL</div>
-              <div className='list'>Supabase</div>
               <div className='list'>Cloudflare Workers</div>
               <div className='list'>MongoDB</div>
               <div className='list'>MySQL</div>

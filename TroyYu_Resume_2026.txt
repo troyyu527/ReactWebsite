@@ -15,7 +15,7 @@ JavaScript | TypeScript | React | Node.js | D3.js | Three.js
 
 Revit API | AutoCAD API | Civil3D API | Tekla Open API
 
-Azure DevOps | Git | SQL | PostgreSQL | Supabase | Cloudflare Workers | MongoDB | MySQL | ACC | BIM 360
+Azure DevOps | Git | SQL | Cloudflare Workers | MongoDB | MySQL | ACC | BIM 360
 
 Prompt Engineering | AI-Assisted Development | Large Language Models (LLMs)
 Agentic Workflows | Retrieval-Augmented Generation (RAG)
