@@ -202,7 +202,6 @@ export const projectDataBIMSoftware = [
   },
   {
     title: "Engineering Model QA",
-    status: "In progress",
     des: "A Windows desktop workbench that checks IFC4 models against rule profiles and compares two revisions — Resolved, Persistent or New",
     link: "https://github.com/troyyu527/EngineeringModelQA",
     linkLabel: "GITHUB",
