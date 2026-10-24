@@ -230,7 +230,7 @@ export const projectDataAI = [
     jobs: [
       "Built retrieval-augmented generation (RAG) over a curated knowledge base of my career: questions are rewritten with the conversation, searched in a vector index, and answered in my voice from the retrieved facts only.",
       "Streams answers from a Cloudflare Worker (TypeScript, LangChain.js) on Workers AI and Vectorize, with source chips, project photos and simulation videos; guarded with rate limits, an origin allow-list and honest \"I don't know\" and NDA rules.",
-      "Measured with a 34-question golden set (retrieval MRR 0.82, answers 4.9/5 by an LLM judge); also on this site as the \"Ask my AI\" button."
+      "Embedded on this site as the \"Ask my AI\" button, loaded only when it is first opened so the portfolio itself stays fast."
     ],
     img: [
       "./img/AI/AIAssistant/main.png",

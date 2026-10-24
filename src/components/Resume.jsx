@@ -96,13 +96,13 @@ function Resume() {
           <div className='main-con'>
             <div className='first-con'>
               <p>UNO Multiplayer Web Game</p>
-              <p>React, TypeScript, Vite, Zustand, Cloudflare Workers (D1, Durable Objects), Tailwind, Vitest</p>
+              <p>React, TypeScript, Vite, Zustand, Cloudflare Workers (D1, Durable Objects), Tailwind</p>
             </div>
             <div className='second-con'>
               <ul>
                 <li>Architected real-time online multiplayer on Cloudflare Durable Objects and WebSockets using a single-writer authority model — the acting seat owns its move and the host owns unattended seats — keeping four clients consistent while the game rules run entirely in the browser.</li>
                 <li>Engineered resilience into live sessions: presence tracking hands an abandoned seat to the AI, players reconnect into their seat after a refresh, and newcomers can claim an AI seat mid-game through atomic, server-serialized seat claims.</li>
-                <li>Implemented the rules as a pure, immutable TypeScript engine independent of React, driving a heuristic weighted-decision AI, and covered it with 66 unit tests including fully simulated games and card-conservation invariants.</li>
+                <li>Implemented the rules as a pure, immutable TypeScript engine independent of React, driving a heuristic weighted-decision AI.</li>
                 <li>Migrated the application from Next.js to Vite + React 18 + TypeScript with Zustand state management, behind a backend-agnostic auth and persistence layer that runs on a Cloudflare Worker (D1, JWT sessions) or falls back to localStorage.</li>
               </ul>
             </div>
