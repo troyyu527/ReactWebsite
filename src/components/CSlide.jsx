@@ -42,6 +42,9 @@ export const CSlide = ({ project }) => {
 					{project.backup && (
 						<p className="cs-backup">Backup: <a href={project.backup.link} target="_blank" rel="noreferrer noopener">{project.backup.label} ↗</a></p>
 					)}
+					{project.source && (
+						<p className="cs-backup">Source code: <a href={project.source} target="_blank" rel="noreferrer noopener">GitHub ↗</a></p>
+					)}
 				</div>
 				<div className="description">
 					<ul>

@@ -100,7 +100,8 @@ TroyYu_Resume_2026.txt         résumé source text (not published — outside p
   `projectDataBIMSoftware` feeds `/BIMSoftware` and `projectDataAI` feeds
   `/AIProjects`. Image paths are relative to `public/`. Optional fields:
   `status` (a badge such as "In progress"), `linkLabel` (button text instead of
-  ENTER), `linkNote` (shown when there's no link) and `backup` (a second link).
+  ENTER), `linkNote` (shown when there's no link), `backup` (a second link) and
+  `source` (a "Source code: GitHub" link).
 - **Résumé (page)** — edit [`src/components/Resume.jsx`](src/components/Resume.jsx).
 - **Résumé (PDF)** — regenerate from `TroyYu_Resume_2026.txt` and replace
   `public/download/TroyYu_Resume.pdf`. Keep the two in step; the page and the

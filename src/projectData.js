@@ -239,17 +239,20 @@ export const projectDataAI = [
   },
   {
     title: "BIM AI Agent",
-    status: "In progress",
-    des: "An engineering-aware AI agent platform that reviews and edits IFC models in the browser — answers with building-code evidence, changes only with human approval",
-    linkNote: "In development · design mockups shown",
+    des: "A team of AI agents checks IFC building models against the NYC building codes in the browser — every finding cites the code clause it comes from",
+    link: "https://troyyu527.github.io/BIM_AI_Agent/",
+    source: "https://github.com/troyyu527/BIM_AI_Agent",
     jobs: [
-      "Three LangGraph agents — Planner, Executor and Validator — work over a Neo4j knowledge graph of the model and a Qdrant RAG of New York building codes: 168 official PDFs parsed into 7,045 citation-ready chunks.",
-      "LLMs plan, deterministic tools execute: the model produces a validated JSON change plan and an MCP tool server (FastMCP + IfcOpenShell) edits the IFC; every change needs the user's approval and can be undone.",
-      "A C# / .NET 8 + xBIM engine turns large IFC files into per-storey 3D geometry for a React / Three.js viewer; a local LLM (Ollama) is the default for privacy. Architecture and an 11-step plan are done; implementation is under way."
+      "Multi-agent QA pipeline in LangGraph.js: a Planner picks the code topics for each model, then a Researcher, Rule Author, Checker and Reviewer turn the code text into checkable rules with verbatim quotes and graded severities. Clashes, fire door ratings and model data are checked deterministically.",
+      "Hybrid RAG over 168 official NYC code PDFs (7,045 chunks): Vectorize embeddings plus D1 full-text search, fused and reranked, with section, page and a PDF preview for every citation.",
+      "Live AI assistant: a Supervisor routes each question to code search, the findings or the model data, then answers with evidence and drives the 3D view (highlight, isolate, show level). It advises on fixes and never edits the model.",
+      "React, Three.js and web-ifc in the browser; a Cloudflare Worker with Workers AI, Vectorize, D1 and Durable Objects on the free plan, with a daily AI budget guard, per-session limits and cached searches."
     ],
     img: [
-      "./img/AI/BimAiAgent/mockup-overview.jpg",
-      "./img/AI/BimAiAgent/mockup-views.jpg",
+      "./img/AI/BimAiAgent/overview.jpg",
+      "./img/AI/BimAiAgent/model.jpg",
+      "./img/AI/BimAiAgent/report.jpg",
+      "./img/AI/BimAiAgent/documents.jpg",
     ],
   },
 ]
