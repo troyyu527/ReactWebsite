@@ -23,7 +23,7 @@ function Aboutme() {
             </picture>
             <div className="cs-box">
               <span className="cs-number">10+</span>
-              <span className="cs-desc">Years<br /> Experience</span>
+              <span className="cs-desc">Years<br /> in AEC</span>
             </div>
           </div>
           {/* Right Content Section*/}
